@@ -21,7 +21,7 @@ fetch('ferryRoutes.json')
 function searchByCrossing() {
     const results = document.getElementById("crossingResults");
     results.innerHTML = "";
-    console.log("Search By Crossing");
+    console.log("Search By Route");
     let route = document.getElementById("ferryRoute").value;
     console.log("Route Selected "+route);
     const matchingFerries = ferryRoutes.filter(ferry => 
@@ -35,6 +35,7 @@ function searchByCrossing() {
          card.innerHTML = `
         <h3>${ferry.crossing_time}</h3>
         <p><strong>Notes:</strong> ${ferry.notes}</p>
+        <p><strong>Operators:</strong> ${ferry.operators} </p>
     `;
     results.appendChild(card);
          
