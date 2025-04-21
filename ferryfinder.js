@@ -1,4 +1,6 @@
-let ferryData = [];
+//let ferryData = [];
+let ferryOperators = [];
+let ferryRoutes = [];
 
 fetch('ferryOperators.json')
   .then(response => response.json())
