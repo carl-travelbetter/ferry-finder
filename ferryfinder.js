@@ -19,7 +19,7 @@ fetch('ferryRoutes.json')
   .catch(error => console.error("Error loading ferry data:", error));
 
 function searchByCrossing() {
-    const results = document.getElementById("crossingResults");
+    const results = document.getElementById("crossingResults 20:49");
     results.innerHTML = "";
     console.log("Search By Route");
     let route = document.getElementById("ferryRoute").value;
