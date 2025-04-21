@@ -35,7 +35,7 @@ function searchByCrossing() {
          card.innerHTML = `
         <h3>${ferry.crossing_time}</h3>
         <p><strong>Notes:</strong> ${ferry.notes}</p>
-        <p><strong>Operators:</strong> ${ferry.operators} </p>
+        <p><strong>Operators:</strong> ${ferry.operators[0]} </p>
     `;
     results.appendChild(card);
          
