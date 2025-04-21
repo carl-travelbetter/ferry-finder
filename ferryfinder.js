@@ -19,9 +19,9 @@ fetch('ferryRoutes.json')
   .catch(error => console.error("Error loading ferry data:", error));
 
 function searchByCrossing() {
-    const results = document.getElementById("crossingResults 20:49");
+    const results = document.getElementById("crossingResults");
     results.innerHTML = "";
-    console.log("Search By Route");
+    console.log("Search By Route 20:49");
     let route = document.getElementById("ferryRoute").value;
     console.log("Route Selected "+route);
     const matchingFerries = ferryRoutes.filter(ferry => 
