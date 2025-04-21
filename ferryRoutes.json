@@ -1,0 +1,47 @@
+[
+  {
+    "route": "Dover to Calais",
+    "crossing_time": "90 minutes",
+    "operators": ["P&O Ferries", "DFDS", "Irish Ferries"],
+    "foot_passenger": true,
+    "dog_friendly": true,
+    "nd_rating": 4,
+    "notes": "Short and frequent crossing, large terminals can be busy at peak times"
+  },
+  {
+    "route": "Portsmouth to Caen",
+    "crossing_time": "6 hours (day), 8 hours (overnight)",
+    "operators": ["Brittany Ferries"],
+    "foot_passenger": true,
+    "dog_friendly": true,
+    "nd_rating": 4.5,
+    "notes": "Quieter overnight sailings available, cabins recommended for ND travellers"
+  },
+  {
+    "route": "Liverpool to Belfast",
+    "crossing_time": "8 hours",
+    "operators": ["Stena Line"],
+    "foot_passenger": false,
+    "dog_friendly": true,
+    "nd_rating": 3,
+    "notes": "Longer journey but smoother than Scotland crossings, good lounge facilities"
+  },
+  {
+    "route": "Holyhead to Dublin",
+    "crossing_time": "3 hours 15 minutes",
+    "operators": ["Irish Ferries", "Stena Line"],
+    "foot_passenger": true,
+    "dog_friendly": true,
+    "nd_rating": 3.5,
+    "notes": "Busy with freight, bring noise-cancelling headphones or plan a quieter time of day"
+  },
+  {
+    "route": "Newhaven to Dieppe",
+    "crossing_time": "4 hours",
+    "operators": ["DFDS"],
+    "foot_passenger": true,
+    "dog_friendly": true,
+    "nd_rating": 4,
+    "notes": "Often quieter than Dover route, but less frequent sailings"
+  }
+]
