@@ -4,7 +4,7 @@ fetch('ferryOperators.json')
   .then(response => response.json())
   .then(data => {
     ferryOperators = data;
-    console.log("Ferry data loaded:", ferryData);
+    console.log("Ferry data loaded:", ferryOperators);
   })
   .catch(error => console.error("Error loading ferry data:", error));
 
@@ -12,7 +12,7 @@ fetch('ferryRoutes.json')
   .then(response => response.json())
   .then(data => {
     ferryRoutes = data;
-    console.log("Ferry data loaded:", ferryData);
+    console.log("Ferry data loaded:", ferryRoutes);
   })
   .catch(error => console.error("Error loading ferry data:", error));
 
