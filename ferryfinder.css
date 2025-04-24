@@ -54,7 +54,7 @@ body {
   display: block;
 }
 
-.searchByCrossing, .searchByProvider {
+.searchByCrossing, .searchByProvider, .searchByNeed {
     text-align:center;
     margin:auto;
 }
