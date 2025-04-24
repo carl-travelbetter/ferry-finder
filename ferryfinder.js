@@ -18,6 +18,10 @@ fetch('ferryRoutes.json')
   })
   .catch(error => console.error("Error loading ferry data:", error));
 
+function searchByNeed() {
+    console.log("Search by need");
+}
+
 function searchByCrossing() {
     const results = document.getElementById("crossingResults");
     results.innerHTML = "";
@@ -30,6 +34,7 @@ function searchByCrossing() {
     
      matchingFerries.forEach(ferry => {
          console.log("Ferry Operator "+ferry.crossing_time);
+         
          const card = document.createElement("div");
          card.classList.add("ferryCard");
          card.innerHTML = `

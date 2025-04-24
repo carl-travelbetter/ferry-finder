@@ -36,6 +36,15 @@ body {
   display: block;
 }
 
+#travelNeeds {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0.5rem auto;
+  width: 90%;
+  max-width: 400px;
+  display: block;
+}
+
 #ferryProvider {
   padding: 0.5rem;
   font-size: 1rem;
@@ -50,6 +59,7 @@ body {
     margin:auto;
 }
 
+.searchByNeed h2, 
 .searchByCrossing h2,
 .operatorComparison h2,
 .searchByProvider h2,
