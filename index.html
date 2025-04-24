@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Ferry Finder</title>
+    <title>Cross Channel Ferry Finder</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ferryfinder.css">
@@ -9,12 +9,23 @@
 <body>
     <header>
     <div class="intro">
-        <h1>Flexible Ferry Ticket App</h1>
-        <p>Learn all you need to know about <b>Flexible Ferry Tickets</b> and find the perfect ticket for your next ferry crossing.</p>
+        <h1>Cross Channel Ferry Finder</h1>
+        <p>Use our <strong>Cross Channel Ferry Finder</strong> to find the perfect ferry for your individual and neurodiverse travel needs and travel better across the English channel to France, Spain or Belgium.</p>
     </div>
     </header>
     <main>
     <div class="app">
+        <div class="searchByNeed">
+            <h2>Search by needs</h2>
+            <label for="travelNeeds">Select Primary Need</label>
+            <select id="travelNeeds">
+                <option value="">-- Select Need --</option>
+                <option value="fatest">Fastest Ferry Crossing</option>
+                <option value="quiet">Quiet Ferry Crossing</option>
+                <option value="bestCabin">Best Cabin Options</option>
+                <option value="highestRating">Highest Travelbetter Rating</option>
+            </select>
+        </div>
         <div class="searchByCrossing">
             <h2>Search By Ferry Route</h2>
             <label for="ferrRoute">Select Ferry Route</label>

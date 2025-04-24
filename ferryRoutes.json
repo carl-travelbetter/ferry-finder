@@ -9,6 +9,15 @@
     "notes": "Short and frequent crossing, large terminals can be busy at peak times"
   },
   {
+    "route": "Dover to Dunkirk",
+    "crossing_time": "3 hours",
+    "operators": ["DFDS"],
+    "foot_passenger": true,
+    "dog_friendly": true,
+    "nd_rating": 4,
+    "notes": "Frequent crossing, very close to the Belgium border"
+  },
+  {
     "route": "Portsmouth to Caen",
     "crossing_time": "6 hours (day), 8 hours (overnight)",
     "operators": ["Brittany Ferries"],
