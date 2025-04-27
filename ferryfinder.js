@@ -37,12 +37,13 @@ function searchByCrossing() {
          
          const card = document.createElement("div");
          card.classList.add("ferryCard");
-         card.innerHTML = `
-        <h3>${ferry.route}</h3>
-        <p><strong>Crossing Time:</strong> ${ferry.crossing_time}</p>
-        <p><strong>Notes:</strong> ${ferry.notes}</p>
-        <p><strong>Operators:</strong> ${ferry.operators[0]} </p>
-    `;
+         
+         //add route title
+         const routeName = document.createElement)'h2');
+         routeName.textContent = ferry.route;
+         card.appendChild(routeName);
+         
+         
     results.appendChild(card);
          
      });
