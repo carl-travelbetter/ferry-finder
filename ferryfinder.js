@@ -60,7 +60,7 @@ function searchByCrossing() {
          //foot passenger
          
          const footPassenger = document.createElement('p');
-         if (${ferry.foot_passenger} == "Yes")
+         if (ferry.foot_passenger == "Yes")
          {
             footPassenger.textContent = `Foot Passengers: ✅`;
          }
