@@ -52,7 +52,7 @@ function searchByCrossing() {
          const operatorList = document.createElement('ul');
          ferry.operators.forEach(operatorName => {
              const operatorItem = document.createElement('li');
-             
+             operatorItem.className = 'operator-link';
              const matchingOperator = ferryOperators.find(op => op.operator === operatorName);
              
              if (matchingOperator) {
