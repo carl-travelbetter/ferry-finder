@@ -43,6 +43,19 @@ function searchByCrossing() {
          routeName.textContent = ferry.route;
          card.appendChild(routeName);
          
+         //add crossing time
+         const crossingTime = document.createElement('p');
+         crossingTime.textContent = 'Crossing Time: ${ferry.crossing_time}';
+         card.appendChild(crossingTime);
+         
+         //Operator list
+         const operatorList = document.createElement('ul');
+         ferry.operators.forEach(operator => {
+             const operatorItem = document.createElement('li');
+             operatorItem.textContent = operator;
+             operatorList.appendChild(operatorItem);
+         });
+         card.appendChild(operatorList);
          
     results.appendChild(card);
          
