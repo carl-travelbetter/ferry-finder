@@ -52,7 +52,19 @@ function searchByCrossing() {
          const operatorList = document.createElement('ul');
          ferry.operators.forEach(operator => {
              const operatorItem = document.createElement('li');
-             operatorItem.textContent = operator;
+             
+             const matchingOperator = ferryOperators.find(op => op.operator === operatorName);
+             
+             if (matchingOperator) {
+                 const link = document.createElement('a');
+                 link.href = matchingOperator.link;
+                 link.textContent = `${matchingOperator.operator} (Rating: ${matchingOperator.travelbetterRating})`;
+                 link.target = "_blank";
+                 operatorItem.appendChild(link);
+             } else {
+                 operatorItem.textContent = operatorName;
+             }
+
              operatorList.appendChild(operatorItem);
          });
          card.appendChild(operatorList);
