@@ -61,11 +61,11 @@ function searchByCrossing() {
          const footPassenger = document.createElement('p');
          if (ferry.foot_passenger == "Yes")
          {
-            footPassenger.textContent = `Foot Passengers: ✅`;
+            footPassenger.textContent = `<strong>Foot Passengers:</strong> ✅`;
          }
          else
          {
-             footPassenger.textContent = `Foot Passengers: ❌`;
+             footPassenger.textContent = `<strong>Foot Passengers:</strong> ❌`;
          }
          card.appendChild(footPassenger);
          
@@ -73,22 +73,22 @@ function searchByCrossing() {
          const dogFriendly = document.createElement('p');
          if (ferry.dog_friendly == "Yes")
          {
-             dogFriendly.textContent = `Dog Friendly: ✅`;
+             dogFriendly.textContent = `<strong>Dog Friendly:</strong> ✅`;
          }
          else
          {
-             dogFriendly.textContent = `Dog Friendly: ❌`;
+             dogFriendly.textContent = `<strong>Dog Friendly:</strong> ❌`;
          }
          card.appendChild(dogFriendly);
          
          //ND Rating
          const rating = document.createElement('p');
-         rating.textContent = `ND Rating: ${ferry.nd_rating}`;
+         rating.textContent = `<strong>Travelbetter Rating:</strong> ${ferry.nd_rating}`;
          card.appendChild(rating);
          
          //Notes 
          const notes = document.createElement('p');
-         notes.textContent = `Notes: ${ferry.notes}`;
+         notes.textContent = `<strong>Notes:</strong> ${ferry.notes}`;
          card.appendChild(notes);
          
     results.appendChild(card);
