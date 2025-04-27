@@ -59,26 +59,14 @@ function searchByCrossing() {
          
          //foot passenger
          const footPassenger = document.createElement('p');
-         if (ferry.foot_passenger == "Yes")
-         {
-            footPassenger.textContent = `Foot Passengers: ✅` ;
-         }
-         else
-         {
-             footPassenger.textContent = `Foot Passengers: ❌`;
-         }
+         footPassenger.textContent = `Foot Passengers: ${ferry.foot_passenger ? '✅' : '❌'}`;
+
+
          card.appendChild(footPassenger);
          
          //Dog Friendly
          const dogFriendly = document.createElement('p');
-         if (ferry.dog_friendly == "Yes")
-         {
-             dogFriendly.textContent = `Dog Friendly: ✅`;
-         }
-         else
-         {
-             dogFriendly.textContent = `Dog Friendly: ❌`;
-         }
+         dogFriendly.textContent = `Dog Friendly: ${ferry.dog_friendly ? '✅' : '❌'}`;
          card.appendChild(dogFriendly);
          
          //ND Rating
