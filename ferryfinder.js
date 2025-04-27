@@ -45,7 +45,7 @@ function searchByCrossing() {
          
          //add crossing time
          const crossingTime = document.createElement('p');
-         crossingTime.textContent = `<strong>Crossing Time:</strong> ${ferry.crossing_time}`;
+         crossingTime.textContent = `Crossing Time: ${ferry.crossing_time}`;
          card.appendChild(crossingTime);
          
          const operatorLabel = document.createElement('h3');
@@ -65,11 +65,11 @@ function searchByCrossing() {
          const footPassenger = document.createElement('p');
          if (ferry.foot_passenger == "Yes")
          {
-            footPassenger.textContent = `<strong>Foot Passengers:</strong> ✅` ;
+            footPassenger.textContent = `Foot Passengers: ✅` ;
          }
          else
          {
-             footPassenger.textContent = `<strong>Foot Passengers:</strong> ❌`;
+             footPassenger.textContent = `Foot Passengers: ❌`;
          }
          card.appendChild(footPassenger);
          
@@ -77,22 +77,22 @@ function searchByCrossing() {
          const dogFriendly = document.createElement('p');
          if (ferry.dog_friendly == "Yes")
          {
-             dogFriendly.textContent = `<strong>Dog Friendly:</strong> ✅`;
+             dogFriendly.textContent = `Dog Friendly: ✅`;
          }
          else
          {
-             dogFriendly.textContent = `<strong>Dog Friendly:</strong> ❌`;
+             dogFriendly.textContent = `Dog Friendly: ❌`;
          }
          card.appendChild(dogFriendly);
          
          //ND Rating
          const rating = document.createElement('p');
-         rating.textContent = `<strong>Travelbetter Rating:</strong> ${ferry.nd_rating}`;
+         rating.textContent = `Travelbetter Rating: ${ferry.nd_rating}`;
          card.appendChild(rating);
          
          //Notes 
          const notes = document.createElement('p');
-         notes.textContent = `<strong>Notes:</strong> ${ferry.notes}`;
+         notes.textContent = `Notes: ${ferry.notes}`;
          card.appendChild(notes);
          
     results.appendChild(card);
