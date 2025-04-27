@@ -39,7 +39,7 @@ function searchByCrossing() {
          card.classList.add("ferryCard");
          
          //add route title
-         const routeName = document.createElement)'h2');
+         const routeName = document.createElement('h2');
          routeName.textContent = ferry.route;
          card.appendChild(routeName);
          
