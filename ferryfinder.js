@@ -58,8 +58,16 @@ function searchByCrossing() {
          card.appendChild(operatorList);
          
          //foot passenger
+         
          const footPassenger = document.createElement('p');
-         footPassenger.textContent = `Foot Passengers: ${ferry.foot_passenger}`;
+         if (${ferry.foot_passenger} == "Yes")
+         {
+            footPassenger.textContent = `Foot Passengers: ✅`;
+         }
+         else
+         {
+             footPassenger.textContent = `Foot Passengers: ❌`;
+         }
          card.appendChild(footPassenger);
          
     results.appendChild(card);
