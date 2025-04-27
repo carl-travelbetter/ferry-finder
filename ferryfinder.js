@@ -45,7 +45,7 @@ function searchByCrossing() {
          
          //add crossing time
          const crossingTime = document.createElement('p');
-         crossingTime.textContent = 'Crossing Time: ${ferry.crossing_time}';
+         crossingTime.textContent = `Crossing Time: ${ferry.crossing_time}`;
          card.appendChild(crossingTime);
          
          //Operator list
@@ -56,6 +56,11 @@ function searchByCrossing() {
              operatorList.appendChild(operatorItem);
          });
          card.appendChild(operatorList);
+         
+         //foot passenger
+         const footPassenger = document.createElement('p');
+         footPassenger.textContent = `Foot Passengers: ${ferry.foot_passenger}`;
+         card.appendChild(footPassenger);
          
     results.appendChild(card);
          
