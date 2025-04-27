@@ -58,7 +58,6 @@ function searchByCrossing() {
          card.appendChild(operatorList);
          
          //foot passenger
-         
          const footPassenger = document.createElement('p');
          if (ferry.foot_passenger == "Yes")
          {
@@ -69,6 +68,28 @@ function searchByCrossing() {
              footPassenger.textContent = `Foot Passengers: ❌`;
          }
          card.appendChild(footPassenger);
+         
+         //Dog Friendly
+         const dogFriendly = document.createElement('p');
+         if (ferry.dog_friendly == "Yes")
+         {
+             dogFriendly.textContent = `Dog Friendly: ✅`;
+         }
+         else
+         {
+             dogFriendly.textContent = `Dog Friendly: ❌`;
+         }
+         card.appendChild(dogFriendly);
+         
+         //ND Rating
+         const rating = document.createElement('p');
+         rating.textContent = `ND Rating: ${ferry.nd_rating}`;
+         card.appendChild(rating);
+         
+         //Notes 
+         const notes = document.createElement('p');
+         notes.textContent = `Notes: ${ferry.notes}`;
+         card.appendChild(notes);
          
     results.appendChild(card);
          
