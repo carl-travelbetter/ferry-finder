@@ -18,10 +18,6 @@ fetch('ferryRoutes.json')
   })
   .catch(error => console.error("Error loading ferry data:", error));
 
-function searchByNeed() {
-    console.log("Search by need");
-}
-
 function searchByCrossing() {
     const results = document.getElementById("crossingResults");
     results.innerHTML = "";
@@ -100,27 +96,5 @@ function searchByCrossing() {
      });
 }
 
-function searchByProvider() {
 
-    const selectedProvider = document.getElementById("ferryProvider").value;
-    const results = document.getElementById("providerResults");
-    results.innerHTML = `<h3>Provider Result</h3>`;
-
-    const matching = ferryOperators.find(ferry => ferry.operator === selectedProvider);
-
-    if (matching) {
-        const card = document.createElement("div");
-        card.classList.add("ferryCard");
-        card.innerHTML = `
-            <h3>${matching.operator}</h3>
-            <p><strong>Amendments:</strong> ${matching.amendments}</p>
-            <p><strong>Cancellations:</strong> ${matching.cancellations}</p>
-            <p><a href="${matching.link}" target="_blank" rel="noopener noreferrer">Book with ${matching.operator} today</a></p>
-            <p>Travelbetter Rating * ${matching.travelbetterRating} / 5 </p>
-        `;
-        results.appendChild(card);
-    } else {
-        results.innerHTML += `<p>No info available for this provider.</p>`;
-    }
-}
 
