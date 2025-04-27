@@ -15,98 +15,28 @@
     </header>
     <main>
     <div class="app">
-        <div class="searchByNeed">
-            <h2>Search by needs</h2>
-            <label for="travelNeeds">Select Primary Need</label>
-            <select id="travelNeeds">
-                <option value="">-- Select Need --</option>
-                <option value="fatest">Fastest Ferry Crossing</option>
-                <option value="quiet">Quiet Ferry Crossing</option>
-                <option value="bestCabin">Best Cabin Options</option>
-                <option value="highestRating">Highest Travelbetter Rating</option>
-            </select>
-            <button class="searchButton" onclick="searchByNeed()">Search</button>
-            
-        </div>
+        
         <div class="searchByCrossing">
             <h2>Search By Ferry Route</h2>
             <label for="ferrRoute">Select Ferry Route</label>
             <select id="ferryRoute">
                 <option value="">-- Select Route --</option>
                 <option value="Dover to Calais" >Dover - Calais</option>
-                <option value="doverDunkirk">Dover - Dunkirk</option>
-                <option value="newhavenDieppe">Newhaven - Dieppe</option>
-                <option value="pooleCherbourg">Poole - Cherbourg</option>
+                <option value="Dover to Dunkirk">Dover - Dunkirk</option>
+                <option value="Newhaven to Dieppe">Newhaven - Dieppe</option>
+                <option value="Poole to Cherbourg">Poole - Cherbourg</option>
                 <option value="Portsmouth to Caen">Portsmouth - Caen</option>
-                <option value="portsmouthStMalo">Portsmouth - St Malo</option>
-                <option value="portsmouthCherbourg">Portsmouth - Cherbourg</option>
-                <option value="portsmouthLeHarve">Portsmouth - LeHarve</option>
-                <option value="plymouthRoscoff">Plymouth - Roscoff</option>
-                <option value="rosslareDunkirk">Rosslare - Dunkirk</option>
+                <option value="Portsmouth to St Malo">Portsmouth - St Malo</option>
+                <option value="Portsmouth to Cherbourg">Portsmouth - Cherbourg</option>
+                <option value="Portsmouth to LeHarve">Portsmouth - LeHarve</option>
+                <option value="Plymouth to Roscoff">Plymouth - Roscoff</option>
+                <option value="Rosslare to Dunkirk">Rosslare - Dunkirk</option>
             </select>
             <button class="searchButton" onclick="searchByCrossing()">Search</button>
             <div class="crossingResults" id="crossingResults">
                
             </div>
-            
         </div>
-        <div class="searchByProvider">
-            <h2>Search by Provider</h2>
-            <label for="ferryProvider">Choose a Ferry Operator</label>
-            <select id="ferryProvider">
-              <option value="">-- Select a Provider --</option>
-              <option value="P&O Ferries">P&O Ferries</option>
-              <option value="DFDS">DFDS</option>
-              <option value="Brittany Ferries">Brittany Ferries</option>
-            </select>
-            <button class="searchButton" onclick="searchByProvider()">Search</button>
-            <div class="providerResults" id="providerResults"></div>
-        </div>
-        <div class="learnMore">
-            <h2>Learn More About Flexible Ferry Tickets</h2>
-
-            <details>
-              <summary><strong>What is a Flexible Ticket?</strong></summary>
-              <p>A flexible ticket allows you to change or cancel your ferry booking with low or no fees. It's a great option if your plans might change, giving you peace of mind.</p>
-            </details>
-            
-            <details>
-              <summary><strong>Are all flexible tickets the same?</strong></summary>
-              <p>No—each ferry operator sets their own rules. Always check the amendment and cancellation terms before you book.</p>
-            </details>
-            
-            <details>
-              <summary><strong>Is it worth paying extra for flexibility?</strong></summary>
-              <p>If there's a chance your plans might shift, the extra cost of a flexible ticket is often much less than change or cancellation fees later.</p>
-            </details>
-            
-            <details>
-              <summary><strong>Does a flexible ticket garuntee I can change it to what I want at any time?</strong></summary>
-              <p>No-A flexible ticket doesn’t guarantee you’ll be able to change to exactly the travel time or date you want. Any changes still depend on availability e.g whether there is space on the ferry you’d prefer.</p>
-            </details>
-
-        </div>
-    </div>
-    <div class="operatorComparison">
-        <h2>Compare Flexible Ferry Tickets</h2>
-
-          <div class="ferryCard">
-            <h3>Brittany Ferries</h3>
-            <p><strong>Amendments:</strong> Free online changes up to 5 days before travel.</p>
-            <p><strong>Cancellations:</strong> Partial refund if canceled 15+ days before departure.</p>
-          </div>
-        
-          <div class="ferryCard">
-            <h3>P&O Ferries</h3>
-            <p><strong>Amendments:</strong> No amendment fees with Flexi; fare difference may apply.</p>
-            <p><strong>Cancellations:</strong> Fully refundable with Premium Flexi.</p>
-          </div>
-        
-          <div class="ferryCard">
-            <h3>Stena Line</h3>
-            <p><strong>Amendments:</strong> Free changes up to 24 hours before departure.</p>
-            <p><strong>Cancellations:</strong> Full refund if canceled 24+ hours in advance; partial refund up to 2 hours before.</p>
-          </div>
     </div>
     <div class="FAQ">
         <h2>Frequently Asked Questions</h2>
