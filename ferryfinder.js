@@ -50,7 +50,7 @@ function searchByCrossing() {
          
          //Operator list
          const operatorList = document.createElement('ul');
-         ferry.operators.forEach(operator => {
+         ferry.operators.forEach(operatorName => {
              const operatorItem = document.createElement('li');
              
              const matchingOperator = ferryOperators.find(op => op.operator === operatorName);
