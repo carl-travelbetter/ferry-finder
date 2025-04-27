@@ -33,12 +33,13 @@ function searchByCrossing() {
      );
     
      matchingFerries.forEach(ferry => {
-         console.log("Ferry Operator "+ferry.crossing_time);
+         console.log("Ferry Crossing "+ferry.route);
          
          const card = document.createElement("div");
          card.classList.add("ferryCard");
          card.innerHTML = `
-        <h3>${ferry.crossing_time}</h3>
+        <h3>${ferry.route}</h3>
+        <p><strong>Crossing Time:</strong> ${ferry.crossing_time}</p>
         <p><strong>Notes:</strong> ${ferry.notes}</p>
         <p><strong>Operators:</strong> ${ferry.operators[0]} </p>
     `;
