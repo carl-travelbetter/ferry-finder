@@ -47,6 +47,7 @@ function searchByCrossing() {
          
          //Notes 
          const notes = document.createElement('p');
+         notes.classList.add('note-text');
          notes.textContent = `${ferry.notes}`;
          card.appendChild(notes);
          
