@@ -166,7 +166,7 @@ summary {
 
 .operator-link {
   text-decoration: underline; /* or none, depending on your style */
-  color: red; /* keeps it the same color as the surrounding text */
+  color: #030ffc; /* keeps it the same color as the surrounding text */
   font-weight: 500; /* slightly bolder if you want it to stand out a little */
 }
 

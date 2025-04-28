@@ -59,8 +59,7 @@ function searchByCrossing() {
                  const link = document.createElement('a');
                  link.classList.add('operator-link');
                  link.href = matchingOperator.link;
-                 //link.textContent = `${matchingOperator.operator} (Rating: ${matchingOperator.travelbetterRating})`;
-                 link.textContent = 'Red Link';
+                 link.textContent = `${matchingOperator.operator} (Rating: ${matchingOperator.travelbetterRating})`;
                  link.target = "_blank";
                  operatorItem.appendChild(link);
              } else {
