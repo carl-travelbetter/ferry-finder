@@ -40,16 +40,16 @@ function searchByCrossing() {
          card.appendChild(routeName);
          
          
-         //add crossing time
-         const crossingTime = document.createElement('p');
-         crossingTime.textContent = `Crossing Time: ${ferry.crossing_time}`;
-         card.appendChild(crossingTime);
-         
          //Notes 
          const notes = document.createElement('p');
          notes.classList.add('note-text');
          notes.textContent = `${ferry.notes}`;
          card.appendChild(notes);
+         
+         //add crossing time
+         const crossingTime = document.createElement('p');
+         crossingTime.textContent = `Crossing Time: ${ferry.crossing_time}`;
+         card.appendChild(crossingTime);
          
          const operatorSection = document.createElement('div');
          operatorSection.classList.add('operator-section');
