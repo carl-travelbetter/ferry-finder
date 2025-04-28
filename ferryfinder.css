@@ -148,34 +148,6 @@ summary {
   cursor: pointer;
 }
 
-/*
-.ferryCard a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.4rem 0.8rem;
-  background-color: #004080;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background-color 0.2s;
-}
-
-.ferryCard a:hover {
-  background-color: #0066cc;
-}*/
-
-.operator-link {
-  text-decoration: underline; /* or none, depending on your style */
-  color: #030ffc; /* keeps it the same color as the surrounding text */
-  font-weight: 500; /* slightly bolder if you want it to stand out a little */
-}
-
-.operator-link:hover {
-  text-decoration: underline;
-  color: #0056b3; /* a slightly different shade on hover if you like */
-}
-
-
 main, .app {
   padding: 1rem;
 }
@@ -216,6 +188,42 @@ main, .app {
 
 .ferryCard p, .ferryCard h3 {
   word-wrap: break-word;
+}
+
+.operator-section {
+  padding-top: 0.75rem;
+  margin-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.operator-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.operator-list li {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.operator-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  margin-left: 0.5rem; /* space between emoji and text */
+}
+
+.operator-link:hover {
+  text-decoration: underline;
+  color: #0077cc;
+}
+
+.emoji {
+  font-size: 1.2rem; /* slightly bigger than text for a friendly look */
 }
 
 

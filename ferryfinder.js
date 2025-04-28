@@ -44,14 +44,24 @@ function searchByCrossing() {
          crossingTime.textContent = `Crossing Time: ${ferry.crossing_time}`;
          card.appendChild(crossingTime);
          
-         const operatorLabel = document.createElement('h3');
-         operatorLabel.textContent = `Route Operators`;
-         card.appendChild(operatorLabel);
+         const operatorSection = document.createElement('div');
+         operatorSection.classList.add('operator-section');
+         
+         const operatorHeading = document.createElement('strong');
+         operatorHeading.textContent = 'Operators:';
+         operatorSection.appendChild(operatorHeading);
          
          //Operator list
          const operatorList = document.createElement('ul');
+         operatorList.classList.add('operator-list');
          ferry.operators.forEach(operatorName => {
              const operatorItem = document.createElement('li');
+             operatorItem.classList.add('operator-item');
+             
+             const emoji = document.createElement('span');
+             emoji.classList.add('emoji');
+             emoji.textContent = '🚢';
+             operatorItem.appendChild(emoji);
              
              const matchingOperator = ferryOperators.find(op => op.operator === operatorName);
              
@@ -68,6 +78,8 @@ function searchByCrossing() {
 
              operatorList.appendChild(operatorItem);
          });
+         
+         //Add the operator list to the ferry card
          card.appendChild(operatorList);
          
          //foot passenger
