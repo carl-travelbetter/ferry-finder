@@ -33,6 +33,7 @@ function searchByCrossing() {
          
          const card = document.createElement("div");
          card.classList.add("ferryCard");
+         card.classList.add('fade-in');
          
          //add route title
          const routeName = document.createElement('h2');
