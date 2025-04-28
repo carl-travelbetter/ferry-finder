@@ -52,11 +52,12 @@ function searchByCrossing() {
          const operatorList = document.createElement('ul');
          ferry.operators.forEach(operatorName => {
              const operatorItem = document.createElement('li');
-             operatorItem.className = 'operator-link';
+             
              const matchingOperator = ferryOperators.find(op => op.operator === operatorName);
              
              if (matchingOperator) {
                  const link = document.createElement('a');
+                 link.classList.add('operator-link');
                  link.href = matchingOperator.link;
                  link.textContent = `${matchingOperator.operator} (Rating: ${matchingOperator.travelbetterRating})`;
                  link.target = "_blank";
