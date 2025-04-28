@@ -50,7 +50,7 @@ function searchByCrossing() {
          const operatorHeading = document.createElement('strong');
          operatorHeading.textContent = 'Operators:';
          operatorSection.appendChild(operatorHeading);
-         
+        
          //Operator list
          const operatorList = document.createElement('ul');
          operatorList.classList.add('operator-list');
@@ -79,8 +79,11 @@ function searchByCrossing() {
              operatorList.appendChild(operatorItem);
          });
          
-         //Add the operator list to the ferry card
-         card.appendChild(operatorList);
+         //Add the operator list to the operator sector
+         operatorSection.appendChild(operatorList);
+         
+         //add the operators to the ferry card
+         card.appendChild(operatorSection);
          
          //foot passenger
          const footPassenger = document.createElement('p');
