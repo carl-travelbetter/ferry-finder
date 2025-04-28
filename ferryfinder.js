@@ -39,16 +39,22 @@ function searchByCrossing() {
          routeName.textContent = ferry.route;
          card.appendChild(routeName);
          
+         
          //add crossing time
          const crossingTime = document.createElement('p');
          crossingTime.textContent = `Crossing Time: ${ferry.crossing_time}`;
          card.appendChild(crossingTime);
          
+         //Notes 
+         const notes = document.createElement('p');
+         notes.textContent = `${ferry.notes}`;
+         card.appendChild(notes);
+         
          const operatorSection = document.createElement('div');
          operatorSection.classList.add('operator-section');
          
          const operatorHeading = document.createElement('strong');
-         operatorHeading.textContent = 'Operators:';
+         operatorHeading.textContent = 'Route Operators:';
          operatorSection.appendChild(operatorHeading);
         
          //Operator list
@@ -102,10 +108,7 @@ function searchByCrossing() {
          rating.textContent = `Travelbetter Rating: ${ferry.nd_rating}`;
          card.appendChild(rating);
          
-         //Notes 
-         const notes = document.createElement('p');
-         notes.textContent = `Notes: ${ferry.notes}`;
-         card.appendChild(notes);
+         
          
     results.appendChild(card);
          

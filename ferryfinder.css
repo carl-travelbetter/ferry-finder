@@ -212,7 +212,7 @@ main, .app {
 
 .operator-link {
   text-decoration: none;
-  color: inherit;
+  color: #0075cf;
   font-weight: 500;
   margin-left: 0.5rem; /* space between emoji and text */
 }
@@ -224,6 +224,15 @@ main, .app {
 
 .emoji {
   font-size: 1.2rem; /* slightly bigger than text for a friendly look */
+}
+
+.note-text {
+    font-style: italic;
+    color: #0e00cf;
+    margin-bottom: 1rem;
+    background: #dedcf5;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
 }
 
 
