@@ -60,7 +60,7 @@ function searchByCrossing() {
                  link.classList.add('operator-link');
                  link.href = matchingOperator.link;
                  //link.textContent = `${matchingOperator.operator} (Rating: ${matchingOperator.travelbetterRating})`;
-                 link.textContent = 'Test Link';
+                 link.textContent = 'Red Link';
                  link.target = "_blank";
                  operatorItem.appendChild(link);
              } else {

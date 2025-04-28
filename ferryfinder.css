@@ -148,6 +148,7 @@ summary {
   cursor: pointer;
 }
 
+/*
 .ferryCard a {
   display: inline-block;
   margin-top: 0.5rem;
@@ -161,11 +162,11 @@ summary {
 
 .ferryCard a:hover {
   background-color: #0066cc;
-}
+}*/
 
 .operator-link {
   text-decoration: underline; /* or none, depending on your style */
-  color: inherit; /* keeps it the same color as the surrounding text */
+  color: red; /* keeps it the same color as the surrounding text */
   font-weight: 500; /* slightly bolder if you want it to stand out a little */
 }
 
