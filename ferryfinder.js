@@ -87,10 +87,16 @@ function searchByCrossing() {
          //Lets add just one operator for now
          const operatorItem1 = document.createElement('li');
          operatorItem1.classList.add('operator-item');
-         const operator1 = ferry.operator1;
-         operatorItem1.appendChild(emoji);
+         //const operator1 = ferry.operator1;
+         const operator1 = ferryOperators.filter(operator1 => 
+         operator1.operatorName.includes(ferry.operator1));
+
+       
+       
+         operatorItem1.appendChild(emoji);  
          const operator1Link = document.createElement('a');
-         operator1Link.textContent = operator1;
+         operator1Link.classList.add('operator-link');
+         operator1Link.textContent = ` Operator ${operator1.operatorName}`;
          operatorItem1.appendChild(operator1Link);
          operatorList.appendChild(operatorItem1);
 
