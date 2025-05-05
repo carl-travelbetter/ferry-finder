@@ -126,6 +126,7 @@ const matchingFerries = ferryRoutes.filter(ferry =>
          //Load Ferry Operator 2 if present
          if (ferry.operator2)
          {
+           console.log("Operator 2 "+ferry.operator2);
            const operatorItem2 = document.createElement('li');
            const operatorLookup = ferry.opertor2;
            const matchingOperators = ferryOperators.filter(operator => 
@@ -154,6 +155,7 @@ const matchingFerries = ferryRoutes.filter(ferry =>
          //Load Ferry Operator 3 if present
          if (ferry.operator3)
          {
+           console.log("Operator 2 "+ferry.operator3);
            const operatorItem3 = document.createElement('li');
            const operatorLookup = ferry.opertor3;
            const matchingOperators = ferryOperators.filter(operator => 
