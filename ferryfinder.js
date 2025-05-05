@@ -96,6 +96,7 @@ function searchByCrossing() {
          operatorItem1.appendChild(emoji);  
          const operator1Link = document.createElement('a');
          operator1Link.classList.add('operator-link');
+         operator1Link.href = operator1.link;
          operator1Link.textContent = ` Operator ${operator1.operatorName}`;
          operatorItem1.appendChild(operator1Link);
          operatorList.appendChild(operatorItem1);
