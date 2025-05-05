@@ -75,9 +75,6 @@ function searchByCrossing() {
          operatorHeading.textContent = 'Route Operators:';
          operatorSection.appendChild(operatorHeading);
 
-         const emoji = document.createElement('span');
-         emoji.classList.add('emoji');
-         emoji.textContent = '🚢';
          
        
          //Operator list
@@ -95,7 +92,11 @@ function searchByCrossing() {
 
             matchingOperators.forEach(operator => {
                console.log("Matching Opeartor "+operator.operatorName);
-      
+               const emoji = document.createElement('span');
+               emoji.classList.add('emoji');
+               emoji.textContent = '🚢';
+         
+              
                operatorItem1.appendChild(emoji);  
                const operator1Link = document.createElement('a');
                operator1Link.classList.add('operator-link');
@@ -134,7 +135,11 @@ const matchingFerries = ferryRoutes.filter(ferry =>
 
            matchingOperators.forEach(operator => {
            console.log("Matching Operator "+operator.operatorName);
-    
+             const emoji = document.createElement('span');
+             emoji.classList.add('emoji');
+             emoji.textContent = '🚢';
+         
+            
              operatorItem2.appendChild(emoji);  
              const operatorLink = document.createElement('a');
              operatorLink.classList.add('operator-link');
@@ -163,7 +168,11 @@ const matchingFerries = ferryRoutes.filter(ferry =>
 
            matchingOperators.forEach(operator => {
            console.log("Matching Operator "+operator.operatorName);
-    
+
+             const emoji = document.createElement('span');
+             emoji.classList.add('emoji');
+             emoji.textContent = '🚢';
+  
              operatorItem3.appendChild(emoji);  
              const operatorLink = document.createElement('a');
              operatorLink.classList.add('operator-link');
