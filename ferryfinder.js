@@ -73,7 +73,7 @@ function searchByCrossing() {
          card.appendChild(sailings);
 
          const priceFrom = document.createElement('p');
-         priceFrom.textContent = `Prices From: ${ferry.priceFrom}`;
+         priceFrom.textContent = `Prices From: ${ferry.pricesFrom}`;
          card.appendChild(priceFrom);
                                                  
        
