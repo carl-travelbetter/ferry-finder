@@ -133,7 +133,7 @@ const matchingFerries = ferryRoutes.filter(ferry =>
            operator.operatorName.includes(operatorLookup));
 
            matchingOperators.forEach(operator => {
-           console.log("Matching Opeartor "+operator.operatorName);
+           console.log("Matching Operator "+operator.operatorName);
     
              operatorItem2.appendChild(emoji);  
              const operatorLink = document.createElement('a');
@@ -162,7 +162,7 @@ const matchingFerries = ferryRoutes.filter(ferry =>
            operator.operatorName.includes(operatorLookup));
 
            matchingOperators.forEach(operator => {
-           console.log("Matching Opeartor "+operator.operatorName);
+           console.log("Matching Operator "+operator.operatorName);
     
              operatorItem2.appendChild(emoji);  
              const operatorLink = document.createElement('a');
