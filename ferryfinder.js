@@ -245,7 +245,7 @@ function searchByCrossing() {
          //const featureTags = 
          ferry.tags.forEach(featureTag => {
            console.log("Feature "+featureTag);
-         }
+         });
 
            
          //ND Rating
