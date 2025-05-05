@@ -53,7 +53,14 @@ function searchByCrossing() {
          //Notes 
          const notes = document.createElement('p');
          notes.classList.add('note-text');
+         if (ferry.notes)
+         {
          notes.textContent = `${ferry.notes}`;
+         }
+         else
+         {
+           notes.textContent = "No notes for this route";
+         }
          card.appendChild(notes);
          
          //add crossing time
