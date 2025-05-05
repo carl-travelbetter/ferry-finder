@@ -92,7 +92,17 @@ function searchByCrossing() {
          operator.operatorName.includes(operator1));
 
          matchingOperators.forEach(operator => {
-           console.log("Matching Opeartor "+operator.operatorName);
+         console.log("Matching Opeartor "+operator.operatorName);
+
+         operatorItem1.appendChild(emoji);  
+         const operator1Link = document.createElement('a');
+         operator1Link.classList.add('operator-link');
+         operator1Link.href = operator.link;
+         operator1Link.textContent = ` ${pperator.operatorName} (Rating: ${pperator.travelbetterRating})`;
+         operatorItem1.appendChild(operator1Link);
+         operatorList.appendChild(operatorItem1);
+
+           
          });
 
 /*
@@ -103,13 +113,7 @@ const matchingFerries = ferryRoutes.filter(ferry =>
      matchingFerries.forEach(ferry => {*/
        
        
-         operatorItem1.appendChild(emoji);  
-         const operator1Link = document.createElement('a');
-         operator1Link.classList.add('operator-link');
-         operator1Link.href = operator1.link;
-         operator1Link.textContent = ` Operator ${operator1.operatorName}`;
-         operatorItem1.appendChild(operator1Link);
-         operatorList.appendChild(operatorItem1);
+         
 
          //Load Ferry Operator 2 if present
          if (ferry.operator2)
