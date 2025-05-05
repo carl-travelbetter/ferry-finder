@@ -98,7 +98,7 @@ function searchByCrossing() {
          const operator1Link = document.createElement('a');
          operator1Link.classList.add('operator-link');
          operator1Link.href = operator.link;
-         operator1Link.textContent = ` ${pperator.operatorName} (Rating: ${operator.travelbetterRating})`;
+         operator1Link.textContent = ` ${operator.operatorName} (Rating: ${operator.travelbetterRating})`;
          operatorItem1.appendChild(operator1Link);
          operatorList.appendChild(operatorItem1);
 
