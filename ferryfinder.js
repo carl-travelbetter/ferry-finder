@@ -164,12 +164,12 @@ const matchingFerries = ferryRoutes.filter(ferry =>
            matchingOperators.forEach(operator => {
            console.log("Matching Operator "+operator.operatorName);
     
-             operatorItem2.appendChild(emoji);  
+             operatorItem3.appendChild(emoji);  
              const operatorLink = document.createElement('a');
              operatorLink.classList.add('operator-link');
              operatorLink.href = operator.link;
              operatorLink.textContent = ` ${operator.operatorName} (Rating: ${operator.travelbetterRating})`;
-             operatorItem2.appendChild(operatorLink);
+             operatorItem3.appendChild(operatorLink);
              operatorList.appendChild(operatorItem3);
     
                
