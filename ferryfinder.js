@@ -84,26 +84,34 @@ function searchByCrossing() {
          const operatorList = document.createElement('ul');
          operatorList.classList.add('operator-list');
 
-         //Lets add just one operator for now
+         //Find Operator 1
          const operatorItem1 = document.createElement('li');
          operatorItem1.classList.add('operator-item');
          const operator1 = ferry.operator1;
-         const matchingOperators = ferryOperators.filter(operator => 
-         operator.operatorName.includes(operator1));
+        if (operator1)
+        {
+           const matchingOperators = ferryOperators.filter(operator => 
+           operator.operatorName.includes(operator1));
 
-         matchingOperators.forEach(operator => {
-         console.log("Matching Opeartor "+operator.operatorName);
-
-         operatorItem1.appendChild(emoji);  
-         const operator1Link = document.createElement('a');
-         operator1Link.classList.add('operator-link');
-         operator1Link.href = operator.link;
-         operator1Link.textContent = ` ${operator.operatorName} (Rating: ${operator.travelbetterRating})`;
-         operatorItem1.appendChild(operator1Link);
-         operatorList.appendChild(operatorItem1);
-
-           
-         });
+            matchingOperators.forEach(operator => {
+               console.log("Matching Opeartor "+operator.operatorName);
+      
+               operatorItem1.appendChild(emoji);  
+               const operator1Link = document.createElement('a');
+               operator1Link.classList.add('operator-link');
+               operator1Link.href = operator.link;
+               operator1Link.textContent = ` ${operator.operatorName} (Rating: ${operator.travelbetterRating})`;
+               operatorItem1.appendChild(operator1Link);
+               operatorList.appendChild(operatorItem1);
+    
+               
+          });
+        }
+        else
+        {
+          console.log("No Operator 1");
+        }
+          
 
 /*
 const matchingFerries = ferryRoutes.filter(ferry => 
@@ -119,9 +127,24 @@ const matchingFerries = ferryRoutes.filter(ferry =>
          if (ferry.operator2)
          {
            const operatorItem2 = document.createElement('li');
-           operatorItem2.classList.add('operator-item');
-           operatorItem2.textContent = ferry.operator2;
-           operatorList.appendChild(operatorItem2);
+           const operatorLookup = ferry.opertor2;
+           const matchingOperators = ferryOperators.filter(operator => 
+           operator.operatorName.includes(operatorLookup));
+
+           matchingOperators.forEach(operator => {
+           console.log("Matching Opeartor "+operator.operatorName);
+    
+             operatorItem2.appendChild(emoji);  
+             const operatorLink = document.createElement('a');
+             operatorLink.classList.add('operator-link');
+             operatorLink.href = operator.link;
+             operatorLink.textContent = ` ${operator.operatorName} (Rating: ${operator.travelbetterRating})`;
+             operatorItem2.appendChild(operatorLink);
+             operatorList.appendChild(operatorItem2);
+    
+               
+        });    
+           
          }
          else
          {
@@ -132,9 +155,23 @@ const matchingFerries = ferryRoutes.filter(ferry =>
          if (ferry.operator3)
          {
            const operatorItem3 = document.createElement('li');
-           operatorItem3.classList.add('operator-item');
-           operatorItem3.textContent = ferry.operator3;
-           operatorList.appendChild(operatorItem3);
+           const operatorLookup = ferry.opertor3;
+           const matchingOperators = ferryOperators.filter(operator => 
+           operator.operatorName.includes(operatorLookup));
+
+           matchingOperators.forEach(operator => {
+           console.log("Matching Opeartor "+operator.operatorName);
+    
+             operatorItem2.appendChild(emoji);  
+             const operatorLink = document.createElement('a');
+             operatorLink.classList.add('operator-link');
+             operatorLink.href = operator.link;
+             operatorLink.textContent = ` ${operator.operatorName} (Rating: ${operator.travelbetterRating})`;
+             operatorItem2.appendChild(operatorLink);
+             operatorList.appendChild(operatorItem3);
+    
+               
+        });    
          }
          else
          {
