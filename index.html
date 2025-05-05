@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <title>Cross Channel Ferry Finder 16:14</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ferryfinder.css">
+    <script src="ferryfinder.js"></script>
+</head>
+<body>
+    <header>
+    <div class="intro">
+        <h1>🚢 Find Your Perfect Cross Channel Ferry with Travelbetter</h1>
+
+<p>Looking for a calm, simple way to travel by ferry?</p>
+<p>Our Ferry Finder is built for quiet, anxious, and neurodiverse families, with clear routes and operator links at your fingertips.</p>
+<p>This is just the beginning — we’re learning and growing, and your feedback will help us make it even better.</p>
+    </div>
+    </header>
+    <main>
+    <div class="app">
+        
+        <div class="searchByCrossing">
+            <h2>Search By Ferry Route</h2>
+            <label for="ferrRoute">Select Ferry Route</label>
+            <select id="ferryRoute">
+                <option value="">-- Select Route --</option>
+                <option value="Dover to Calais" >Dover - Calais</option>
+                <option value="Dover to Dunkirk">Dover - Dunkirk</option>
+                <option value="Newhaven to Dieppe">Newhaven - Dieppe</option>
+                <option value="Poole to Cherbourg">Poole - Cherbourg</option>
+                <option value="Portsmouth to Caen">Portsmouth - Caen</option>
+                <option value="Portsmouth to St Malo">Portsmouth - St Malo</option>
+                <option value="Portsmouth to Cherbourg">Portsmouth - Cherbourg</option>
+                <option value="Portsmouth to LeHarve">Portsmouth - LeHarve</option>
+                <option value="Plymouth to Roscoff">Plymouth - Roscoff</option>
+                <option value="Rosslare to Dunkirk">Rosslare - Dunkirk</option>
+            </select>
+            <button class="searchButton" onclick="searchByCrossing()">Search</button>
+            <div class="crossingResults" id="crossingResults">
+               
+            </div>
+            <div class="feedback">
+                <h2>Feedback to us</h2>
+                <p>💬 Got a suggestion or spotted a mistake? <a href="feedback.html">Lets us know here.</a></p>
+            </div>
+            <div>
+                <h2>Version</h2>
+                <p>🚧 This is a first version! We're improving based on your feedback.</p>
+                <p>Right now you can browse ferry routes and see the operators who run them. We'll be adding search and filters soon!</p>
+            </div>
+        </div>
+    </div>
+    <div class="FAQ">
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+          <summary><strong>What happens if the ferry is full?</strong></summary>
+          <p>You may be offered the next available sailing, but this depends on the operator and your ticket type. Flexible tickets give you more options, but availability still matters.</p>
+        </details>
+        
+        <details>
+          <summary><strong>Can I change my ticket on the same day?</strong></summary>
+          <p>Some operators allow last-minute changes with flexible tickets, while others need more notice. Always check the terms at the time of booking.</p>
+        </details>
+        
+        <details>
+          <summary><strong>What’s the difference between standard and flexible tickets?</strong></summary>
+          <p>Standard tickets are cheaper but less flexible. If your plans change, you may face high amendment or cancellation fees. Flexible tickets cost a bit more but allow changes or cancellations with fewer penalties.</p>
+        </details>
+
+    </div>
+    </main>
+    <footer>
+        
+    </footer>
+</body>

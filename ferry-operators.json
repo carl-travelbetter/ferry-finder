@@ -1,0 +1,74 @@
+[
+ {
+   "Operator ID": "O0001",
+   "Operator Name": "Brittany Ferries",
+   "Amendment Policy": "Free changes up to 24 hours before departure with a flexible ticket.",
+   "Cancellation Policy": "Full refund if canceled 24+ hours in advance.",
+   "Link": "https://tidd.ly/44jxUHV",
+   "Travelbetter Rating": 4,
+   "More Info Link": "https://travelbetter.co.uk",
+   "Foot-passengers": true,
+   "Dog-friendly": true,
+   "Accessibility Support and Facilities": true
+ },
+ {
+   "Operator ID": "O0002",
+   "Operator Name": "P&O Ferries",
+   "Amendment Policy": "No amendment fees with Flexi; fare difference may apply.",
+   "Cancellation Policy": "Fully refundable with Premium Flexi.",
+   "Link": "https://www.poferries.com/en",
+   "Travelbetter Rating": 4,
+   "More Info Link": "https://travelbetter.co.uk",
+   "Foot-passengers": true,
+   "Dog-friendly": true,
+   "Accessibility Support and Facilities": true
+ },
+ {
+   "Operator ID": "O0003",
+   "Operator Name": "Irish Ferries",
+   "Amendment Policy": "Economy fares are subject to amendment feess. Flexi bookings allowing free amendments prior to departure.",
+   "Cancellation Policy": "Economy fares are subject to 100% cancellation fee.",
+   "Link": "https://www.irishferries.com/uk-en/Travel-to-France/",
+   "Travelbetter Rating": 4,
+   "More Info Link": "https://travelbetter.co.uk",
+   "Foot-passengers": true,
+   "Dog-friendly": true,
+   "Accessibility Support and Facilities": true
+ },
+ {
+   "Operator ID": "O0004",
+   "Operator Name": "Stena Line",
+   "Amendment Policy": "Economy fares are subject to an amendment fee. Other fares can make changes withut incurring a charge. ",
+   "Cancellation Policy": "No refunds for cancellation on economy fares. Other fares will recieve a refund but may stil lbe subject to cancellation fees. ",
+   "Link": "https://www.stenaline.co.uk/",
+   "Travelbetter Rating": 4,
+   "More Info Link": "https://travelbetter.co.uk",
+   "Foot-passengers": true,
+   "Dog-friendly": true,
+   "Accessibility Support and Facilities": true
+ },
+ {
+   "Operator ID": "O0005",
+   "Operator Name": "DFDS",
+   "Amendment Policy": "Free changes up to 24 hours before departure.",
+   "Cancellation Policy": "Free changes up to 24 hours before departure.",
+   "Link": "https://www.dfds.com/",
+   "Travelbetter Rating": 4,
+   "More Info Link": "https://travelbetter.co.uk",
+   "Foot-passengers": true,
+   "Dog-friendly": true,
+   "Accessibility Support and Facilities": true
+ },
+ {
+   "Operator ID": "O0006",
+   "Operator Name": "Condor Ferries",
+   "Amendment Policy": "Free online amendments with a standard ticket, all changes need to be made before you travel.",
+   "Cancellation Policy": "FREE cancellation up to 48 hours before departure with a standard ticket",
+   "Link": "https://tidd.ly/4iQAeK5",
+   "Travelbetter Rating": 3,
+   "More Info Link": "https://travelbetter.co.uk",
+   "Foot-passengers": true,
+   "Dog-friendly": true,
+   "Accessibility Support and Facilities": true
+ }
+]
