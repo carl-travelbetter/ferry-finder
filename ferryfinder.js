@@ -241,7 +241,10 @@ function searchByCrossing() {
 
 
          //Load up the tags-features
-
+         const featureList = document.createElement('h2');
+         featureList.textContent = `Route Features`;
+         card.appendChild(featureList);
+       
          //const featureTags = 
          ferry.tags.forEach(featureTag => {
            console.log("Feature "+featureTag);
@@ -249,6 +252,9 @@ function searchByCrossing() {
            if (matchingTag)
            {
              console.log("Matching Tag "+matchingTag.Icon);
+             const tagP = document.createElement('p');
+             tagP.textContent = `${matchingTag.Icon} ${matchingTag.Label}`;
+             card.appendChild(tagP);
            }
            else 
            { 
