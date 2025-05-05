@@ -86,6 +86,7 @@ function searchByCrossing() {
          operatorItem1.textContent = operator1;
          operatorList.appendChild(operatorItem1);
 
+         //Load Ferry Operator 2 if present
          if (ferry.operator2)
          {
            const operatorItem2 = document.createElement('li');
@@ -97,7 +98,19 @@ function searchByCrossing() {
          {
            console.log("No Operator 2");
          }
-       
+
+         //Load Ferry Operator 3 if present
+         if (ferry.operator3)
+         {
+           const operatorItem3 = document.createElement('li');
+           operatorItem3.classList.add('operator-item');
+           operatorItem3.textContent = ferry.operator3;
+           operatorList.appendChild(operatorItem3);
+         }
+         else
+         {
+           console.log("No Operator 3");
+         }                               
          operatorSection.appendChild(operatorList);
          
          //add the operators to the ferry card
