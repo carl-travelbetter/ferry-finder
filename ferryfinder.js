@@ -245,6 +245,15 @@ function searchByCrossing() {
          //const featureTags = 
          ferry.tags.forEach(featureTag => {
            console.log("Feature "+featureTag);
+           const matchingTag = ferryTags.find(tag => tag.Id === featureTag);
+           if (matchingTag)
+           {
+             console.log("Matching Tag "+matchingTag.Icon);
+           }
+           else 
+           { 
+             console.log("No Matching Tag Found");
+           }
          });
 
            
