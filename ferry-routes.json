@@ -17,7 +17,7 @@
    "pricesFrom": "£80.00",
    "sailings": "Up to 35 times per day",
    "rating": 3,
-   "tags": ["flexible-ferry-times", "priority-boarding", "pet-friendly", "motorhome", "caravans", "accessibe", "foot-passenger"],
+   "tags": ["flexible-ferry-times", "priority-boarding", "pet-friendly", "motor-home", "accessibe", "foot-passenger"],
    "notes": null
  },
  {
@@ -38,7 +38,7 @@
    "pricesFrom": "£81.00",
    "sailings": "Up to 8 times per day",
    "rating": 3,
-   "tags": ["flexible-ferry-times", "priority-boarding", "pet-friendly", "motorhome", "caravans", "accessibe", "foot-passenger"],
+   "tags": ["flexible-ferry-times", "priority-boarding", "pet-friendly", "motor-home", "accessibe", "foot-passenger"],
    "notes": null
  },
  {
@@ -59,7 +59,7 @@
    "pricesFrom": "£126.00",
    "sailings": "Up to 3 times per day",
    "rating": 3,
-   "tags": ["quiet-friendly", "cabins", "priority-boarding", "pet-friendly", "motorhome", "caravans", "accessible"],
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "pet-friendly", "motor-home", "accessible"],
    "notes": null
  },
  {
@@ -80,7 +80,7 @@
    "pricesFrom": "£77.00",
    "sailings": "Up to 5 times per week",
    "rating": 3,
-   "tags": ["quiet-friendly", "cabins", "priority-boarding", "pet-friendly", "motorhome", "caravans", "accessible"],
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "pet-friendly", "motor-home", "accessible"],
    "notes": "No weekend crossings, return leg is overnight"
  },
  {
@@ -101,7 +101,7 @@
    "pricesFrom": "£99.00",
    "sailings": "Up to 3 times per week",
    "rating": 3,
-   "tags": ["quiet-friendly", "cabins", "priority-boarding", "pet-friendly", "motorhome", "caravans", "accessible"],
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "pet-friendly", "motor-home", "accessible"],
    "notes": "Good point for Brittany"
  },
  {
@@ -164,7 +164,7 @@
    "pricesFrom": "£146.00",
    "sailings": "Up to 8 times per week",
    "rating": 3,
-   "tags": ["quiet-friendly", "cabins", "priority-boarding", "pet-friendly", "motorhome", "caravans", "accessible", "foot-passenger"],
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "pet-friendly", "motor-home", "accessible", "foot-passenger"],
    "notes": null
  },
  {
@@ -206,7 +206,7 @@
    "pricesFrom": "£165.00",
    "sailings": "Once per day",
    "rating": 3,
-   "tags": ["quiet-friendly", "cabins", "priority-boarding", "pet-friendly", "motorhome", "caravans", "accessible"],
+   "tags": ["quiet-friendly", "cabins", "priority-boarding", "pet-friendly", "motor-home", "accessible"],
    "notes": "Overnight only, good for Mont Saint-Michel"
  }
 ]
