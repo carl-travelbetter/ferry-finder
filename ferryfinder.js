@@ -93,7 +93,7 @@ function searchByCrossing() {
 
          matchingOperators.forEach(operator => {
            console.log("Matching Opeartor "+operator.operatorName);
-         }
+         });
 
 /*
 const matchingFerries = ferryRoutes.filter(ferry => 
