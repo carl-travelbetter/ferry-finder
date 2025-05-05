@@ -83,7 +83,7 @@ function searchByCrossing() {
          const operatorItem = document.createElement('li');
          operatorItem.classList.add('operator-item');
          const operator1 = ferry.operator1;
-         operatorItem.appendChild(operator1);
+         operatorItem..textContent = operator1;
          operatorList.appendChild(operatorItem);
          operatorSection.appendChild(operatorList);
          
