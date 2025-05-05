@@ -123,15 +123,7 @@ function searchByCrossing() {
         }
           
 
-/*
-const matchingFerries = ferryRoutes.filter(ferry => 
-     ferry.route.includes(route)
-     );
-    
-     matchingFerries.forEach(ferry => {*/
-       
-       
-         
+
 
          //Load Ferry Operator 2 if present
          if (ferry.operator2)
@@ -246,7 +238,16 @@ const matchingFerries = ferryRoutes.filter(ferry =>
          const dogFriendly = document.createElement('p');
          dogFriendly.textContent = `Dog Friendly: ${ferry.dog_friendly ? '✅' : '❌'}`;
          card.appendChild(dogFriendly);*/
-         
+
+
+         //Load up the tags-features
+
+         //const featureTags = 
+         ferry.tags.forEach(featureTag => {
+           console.log("Feature "+featureTag);
+         }
+
+           
          //ND Rating
          const rating = document.createElement('p');
          rating.textContent = `Travelbetter Rating: ${ferry.rating}`;
