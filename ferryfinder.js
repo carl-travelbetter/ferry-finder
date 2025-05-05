@@ -74,10 +74,23 @@ function searchByCrossing() {
          const operatorHeading = document.createElement('strong');
          operatorHeading.textContent = 'Route Operators:';
          operatorSection.appendChild(operatorHeading);
-        /*
+        
          //Operator list
          const operatorList = document.createElement('ul');
          operatorList.classList.add('operator-list');
+
+         //Lets add just one operator for now
+         const operatorItem = document.createElement('li');
+         operatorItem.classList.add('operator-item');
+         const operator1 = ferry.operator1;
+         operatorItem.appendChild(operator1);
+         operatorList.appendChild(operatorItem);
+         operatorSection.appendChild(operatorList);
+         
+         //add the operators to the ferry card
+         card.appendChild(operatorSection);
+       
+       /*
          ferry.operators.forEach(operatorName => {
              const operatorItem = document.createElement('li');
              operatorItem.classList.add('operator-item');
