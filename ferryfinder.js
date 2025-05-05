@@ -67,7 +67,16 @@ function searchByCrossing() {
          const crossingTime = document.createElement('p');
          crossingTime.textContent = `Crossing Time: ${ferry.dayCrossingTimeMins} mins`;
          card.appendChild(crossingTime);
-         
+
+         const sailings = document.createElement('p');
+         sailings.textContent = `Salings: ${ferry.sailings}`;
+         card.appendChild(sailings);
+
+         const priceFrom = document.createElement('p');
+         priceFrom.textContent = `Prices From: ${ferry.priceFrom}`;
+         card.appendChild(priceFrom);
+                                                 
+       
          const operatorSection = document.createElement('div');
          operatorSection.classList.add('operator-section');
          
