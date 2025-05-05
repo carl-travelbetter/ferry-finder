@@ -80,11 +80,24 @@ function searchByCrossing() {
          operatorList.classList.add('operator-list');
 
          //Lets add just one operator for now
-         const operatorItem = document.createElement('li');
-         operatorItem.classList.add('operator-item');
+         const operatorItem1 = document.createElement('li');
+         operatorItem1.classList.add('operator-item');
          const operator1 = ferry.operator1;
-         operatorItem.textContent = operator1;
-         operatorList.appendChild(operatorItem);
+         operatorItem1.textContent = operator1;
+         operatorList.appendChild(operatorItem1);
+
+         if (ferry.operator2)
+         {
+           const operatorItem2 = document.createElement('li');
+           operatorItem2.classList.add('operator-item');
+           operatorItem2.textContent = ferry.operator2;
+           operatorList.appendChild(operatorItem2);
+         }
+         else
+         {
+           console.log("No Operator 2");
+         }
+       
          operatorSection.appendChild(operatorList);
          
          //add the operators to the ferry card
