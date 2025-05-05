@@ -55,17 +55,17 @@ function searchByCrossing() {
          notes.classList.add('note-text');
          if (ferry.notes)
          {
-         notes.textContent = `${ferry.notes}`;
+             notes.textContent = `${ferry.notes}`;
          }
          else
          {
-           notes.textContent = "No notes for this route";
+             notes.textContent = "No notes for this route";
          }
          card.appendChild(notes);
          
          //add crossing time
          const crossingTime = document.createElement('p');
-         crossingTime.textContent = `Crossing Time: ${ferry.dayCrossingTimeMins}`;
+         crossingTime.textContent = `Crossing Time: ${ferry.dayCrossingTimeMins} mins`;
          card.appendChild(crossingTime);
          
          const operatorSection = document.createElement('div');
@@ -74,7 +74,12 @@ function searchByCrossing() {
          const operatorHeading = document.createElement('strong');
          operatorHeading.textContent = 'Route Operators:';
          operatorSection.appendChild(operatorHeading);
-        
+
+         const emoji = document.createElement('span');
+         emoji.classList.add('emoji');
+         emoji.textContent = '🚢';
+         
+       
          //Operator list
          const operatorList = document.createElement('ul');
          operatorList.classList.add('operator-list');
@@ -83,7 +88,10 @@ function searchByCrossing() {
          const operatorItem1 = document.createElement('li');
          operatorItem1.classList.add('operator-item');
          const operator1 = ferry.operator1;
-         operatorItem1.textContent = operator1;
+         operatorItem1.appendChild(emoji);
+         const operator1Link = document.createElement('a');
+         operator1Link.textContent = operator1;
+         operatorItem1.appendChild(operator1Link);
          operatorList.appendChild(operatorItem1);
 
          //Load Ferry Operator 2 if present
