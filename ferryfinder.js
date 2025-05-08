@@ -335,5 +335,16 @@ function searchByCrossing() {
      });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const clearButton = document.getElementById('clearFilters');
+  if (clearButton) {
+    clearButton.addEventListener('click', () => {
+      document.querySelectorAll('.tag-btn.active').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      updateNeedSearch(); // Refresh the results (likely clears them)
+    });
+  }
+});
 
 
