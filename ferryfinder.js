@@ -3,6 +3,25 @@ let ferryOperators = [];
 let ferryRoutes = [];
 let ferryTags = [];
 
+function createTagButtons() {
+  const container = document.getElementById("tagFilters");
+  if (!ferryTags.length) return;
+
+  ferryTags.forEach(tag => {
+    const button = document.createElement("button");
+    button.className = "tag-btn";
+    button.setAttribute("data-tag", tag.Id);
+    button.innerHTML = `${tag.Icon} ${tag.Label}`;
+    
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+      updateNeedSearch();
+    });
+
+    container.appendChild(button);
+  });
+}
+
 fetch('ferry-operators.json')
   .then(response => response.json())
   .then(data => {
