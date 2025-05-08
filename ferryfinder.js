@@ -54,6 +54,11 @@ function updateNeedSearch() {
   const results = document.getElementById("needResults");
   results.innerHTML = "";
 
+  if (selected.length === 0) {
+    results.innerHTML = "<p>Please select one or more travel needs to see matching routes.</p>";
+    return;
+  }
+  
   const matchingRoutes = ferryRoutes.filter(route => 
     selected.every(tag => route.tags.includes(tag))
   );
