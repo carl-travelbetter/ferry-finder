@@ -251,4 +251,26 @@ main, .app {
   }
 }
 
+.tag-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.tag-btn.active {
+  background-color: #e0f2fe;
+  border-color: #0284c7;
+}
+
+.tag-btn img {
+  width: 20px;
+  height: 20px;
+}
+
 
