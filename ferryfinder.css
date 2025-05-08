@@ -258,7 +258,8 @@ main, .app {
   padding: 0.5rem 0.8rem;
   border: 1px solid #ccc;
   border-radius: 1.5rem;
-  background-color: #fff;
+  background-color: #004080;
+  color: white;
   cursor: pointer;
   transition: background-color 0.2s, border-color 0.2s;
 }
