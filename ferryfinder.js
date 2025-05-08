@@ -3,25 +3,6 @@ let ferryOperators = [];
 let ferryRoutes = [];
 let ferryTags = [];
 
-function createTagButtons() {
-  const container = document.getElementById("tagFilters");
-  if (!ferryTags.length) return;
-
-  ferryTags.forEach(tag => {
-    const button = document.createElement("button");
-    button.className = "tag-btn";
-    button.setAttribute("data-tag", tag.Id);
-    button.innerHTML = `${tag.Icon} ${tag.Label}`;
-    
-    button.addEventListener("click", () => {
-      button.classList.toggle("active");
-      updateNeedSearch();
-    });
-
-    container.appendChild(button);
-  });
-}
-
 fetch('ferry-operators.json')
   .then(response => response.json())
   .then(data => {
@@ -43,8 +24,68 @@ fetch('ferry-tags.json')
   .then(data => {
     ferryTags = data;
     console.log("Ferry Tags loaded:", ferryTags);
+    createTagButtons(); // load tag buttons
   })
   .catch(error => console.error("Error loading ferry data:", error));
+
+function createTagButtons() {
+  const container = document.getElementById("tagFilters");
+  if (!ferryTags.length) return;
+
+  ferryTags.forEach(tag => {
+    const button = document.createElement("button");
+    button.className = "tag-btn";
+    button.setAttribute("data-tag", tag.Id);
+    button.innerHTML = `${tag.Icon} ${tag.Label}`;
+    
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+      updateNeedSearch();
+    });
+
+    container.appendChild(button);
+  });
+}
+
+function updateNeedSearch() {
+  const selected = Array.from(document.querySelectorAll('.tag-btn.active'))
+    .map(btn => btn.dataset.tag);
+
+  const results = document.getElementById("needResults");
+  results.innerHTML = "";
+
+  const matchingRoutes = ferryRoutes.filter(route => 
+    selected.every(tag => route.tags.includes(tag))
+  );
+
+  if (matchingRoutes.length === 0) {
+    results.innerHTML = "<p>No matching routes found. Try adjusting your filters.</p>";
+    return;
+  }
+
+  matchingRoutes.forEach(ferry => {
+    const card = document.createElement("div");
+    card.className = "ferryCard fade-in";
+    
+    const routeTitle = document.createElement("h2");
+    routeTitle.textContent = ferry.route;
+    card.appendChild(routeTitle);
+
+    const tagList = document.createElement("div");
+    ferry.tags.forEach(tag => {
+      const match = ferryTags.find(t => t.Id === tag);
+      if (match) {
+        const tagP = document.createElement("p");
+        tagP.textContent = `${match.Icon} ${match.Label}`;
+        tagList.appendChild(tagP);
+      }
+    });
+
+    card.appendChild(tagList);
+    results.appendChild(card);
+  });
+}
+
 
 function searchByCrossing() {
     const results = document.getElementById("crossingResults");
