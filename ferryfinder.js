@@ -403,6 +403,9 @@ function searchByOperator() {
     rating.textContent = `Travelbetter Rating: ${ferry.rating}`;
     card.appendChild(rating);
 
+    //look up the operator in the ferry operator file
+    
+
     resultsContainer.appendChild(card);
   });
 }
