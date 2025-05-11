@@ -28,6 +28,23 @@ fetch('ferry-tags.json')
   })
   .catch(error => console.error("Error loading ferry data:", error));
 
+//search selection control
+function showSection(section) {
+  const sections = ["crossing", "need", "operator"];
+  sections.forEach(id => {
+    const el = document.getElementById(`searchSection-${id}`);
+    if (el) {
+      el.style.display = (id === section) ? "block" : "none";
+    }
+  });
+}
+
+// Show the default section on load (Route)
+document.addEventListener("DOMContentLoaded", () => {
+  showSection("need");
+});
+
+
 function createTagButtons() {
   const container = document.getElementById("tagFilters");
   if (!ferryTags.length) return;
