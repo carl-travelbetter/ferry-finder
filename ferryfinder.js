@@ -406,7 +406,7 @@ function searchByOperator() {
     //look up the operator in the ferry operator file
     if (selectedOperator) {
       const operatorData = ferryOperators.find(op =>
-        op.operatorName.toLowerCase().includes(selectedOperator.toLowerCase())
+        op.operatorName.toLowerCase().includes(selectedOperator)
       );
 
   if (operatorData && operatorData.link) {
