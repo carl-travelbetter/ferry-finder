@@ -340,6 +340,74 @@ function searchByCrossing() {
      });
 }
 
+function searchByOperator() {
+  const selectedOperator = document.getElementById("ferryProvider").value;
+  const resultsContainer = document.getElementById("providerResults");
+  resultsContainer.innerHTML = "";
+
+  if (!selectedOperator) {
+    resultsContainer.innerHTML = "<p>Please select an operator to search routes.</p>";
+    return;
+  }
+
+  const matchingRoutes = ferryRoutes.filter(route =>
+    route.operator1 === selectedOperator ||
+    route.operator2 === selectedOperator ||
+    route.operator3 === selectedOperator
+  );
+
+  if (matchingRoutes.length === 0) {
+    resultsContainer.innerHTML = "<p>No routes found for that operator.</p>";
+    return;
+  }
+
+  matchingRoutes.forEach(ferry => {
+    const card = document.createElement("div");
+    card.className = "ferryCard fade-in";
+
+    const title = document.createElement("h2");
+    title.textContent = ferry.route;
+    card.appendChild(title);
+
+    const notes = document.createElement("p");
+    notes.classList.add('note-text');
+    notes.textContent = ferry.notes || "No notes for this route";
+    card.appendChild(notes);
+
+    const crossingTime = document.createElement("p");
+    crossingTime.textContent = `Crossing Time: ${ferry.dayCrossingTimeMins || "N/A"} mins`;
+    card.appendChild(crossingTime);
+
+    const sailings = document.createElement("p");
+    sailings.textContent = `Sailings: ${ferry.sailings}`;
+    card.appendChild(sailings);
+
+    const price = document.createElement("p");
+    price.textContent = `Prices From: ${ferry.pricesFrom}`;
+    card.appendChild(price);
+
+    const tagsHeading = document.createElement("h3");
+    tagsHeading.textContent = "Route Features";
+    card.appendChild(tagsHeading);
+
+    ferry.tags.forEach(tagId => {
+      const tag = ferryTags.find(t => t.Id === tagId);
+      if (tag) {
+        const tagEl = document.createElement("p");
+        tagEl.textContent = `${tag.Icon} ${tag.Label}`;
+        card.appendChild(tagEl);
+      }
+    });
+
+    const rating = document.createElement("p");
+    rating.textContent = `Travelbetter Rating: ${ferry.rating}`;
+    card.appendChild(rating);
+
+    resultsContainer.appendChild(card);
+  });
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const clearButton = document.getElementById('clearFilters');
   if (clearButton) {
