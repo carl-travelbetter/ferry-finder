@@ -376,6 +376,7 @@ function searchByOperator() {
     bookNow.className = "bookButton";
     bookNow.target = "_blank";
     bookNow.rel = "noopener noreferrer";
+    bookNow.title = "Affiliate link – opens in new tab";
     card.appendChild(bookNow);
   }
 }
