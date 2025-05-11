@@ -404,7 +404,21 @@ function searchByOperator() {
     card.appendChild(rating);
 
     //look up the operator in the ferry operator file
-    
+    if (selectedOperator) {
+      const operatorData = ferryOperators.find(op =>
+        op.operatorName.toLowerCase().includes(selectedOperator.toLowerCase())
+      );
+
+  if (operatorData && operatorData.link) {
+    const bookNow = document.createElement("a");
+    bookNow.href = operatorData.link;
+    bookNow.textContent = "Book Now";
+    bookNow.className = "bookButton";
+    bookNow.target = "_blank";
+    bookNow.rel = "noopener noreferrer";
+    card.appendChild(bookNow);
+  }
+}
 
     resultsContainer.appendChild(card);
   });
