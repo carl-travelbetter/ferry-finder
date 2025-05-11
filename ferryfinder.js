@@ -366,7 +366,7 @@ function searchByOperator() {
     if (selectedOperator) {
       console.log("Search By Operator - Creating Book now Link...");
       const operatorData = ferryOperators.find(op =>
-        op.operatorName.toLowerCase().includes(selectedOperator)
+        op.operatorName.toLowerCase().includes(selectedOperator.toLowerCase())
       );
 
   if (operatorData && operatorData.link) {
