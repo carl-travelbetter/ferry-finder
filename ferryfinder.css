@@ -286,5 +286,10 @@ main, .app {
   background-color: #0066cc;
 }
 
+#clearMessage {
+  transition: opacity 0.5s ease-in-out;
+}
+
+
 
 
