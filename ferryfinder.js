@@ -39,6 +39,24 @@ function showSection(section) {
   });
 }
 
+function clearAllSearches() {
+  console.log("Clear All Searches...");
+  // Clear dropdowns
+  document.getElementById("ferryRoute").value = "";
+  document.getElementById("ferryProvider").value = "";
+
+  // Clear tag selections
+  document.querySelectorAll(".tag-btn.active").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  // Clear all result sections
+  document.getElementById("crossingResults").innerHTML = "";
+  document.getElementById("needResults").innerHTML = "";
+  document.getElementById("providerResults").innerHTML = "";
+}
+
+
 // Show the default section on load (Route)
 document.addEventListener("DOMContentLoaded", () => {
   showSection("need");
