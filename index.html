@@ -51,6 +51,23 @@
             <div class="crossingResults" id="crossingResults">
                
             </div>
+            <div class="searchByProvider">
+                <!-- Search by Operator -->
+              <h2>Search By Operator</h2>
+              <label for="ferryProvider">Choose an Operator</label>
+              <select id="ferryProvider">
+                <option value="">-- Select Operator --</option>
+                <option value="Brittany Ferries">Brittany Ferries</option>
+                <option value="DFDS">DFDS</option>
+                <option value="P&O Ferries">P&O Ferries</option>
+                <option value="Irish Ferries">Irish Ferries</option>
+                <option value="Stena Line">Stena Line</option>
+                <option value="Condor Ferries">Condor Ferries</option>
+              </select>
+              <button class="searchButton" onclick="searchByOperator()">Search</button>
+              <div class="providerResults" id="providerResults"></div>
+            </div>
+
             <div class="feedback">
                 <h2>Feedback to us</h2>
                 <p>💬 Got a suggestion or spotted a mistake? <a href="feedback.html">Lets us know here.</a></p>
