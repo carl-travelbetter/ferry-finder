@@ -54,6 +54,14 @@ function clearAllSearches() {
   document.getElementById("crossingResults").innerHTML = "";
   document.getElementById("needResults").innerHTML = "";
   document.getElementById("providerResults").innerHTML = "";
+
+  // Show confirmation message
+  const message = document.getElementById("clearMessage");
+  message.style.display = "block";
+
+  setTimeout(() => {
+    message.style.display = "none";
+  }, 2000);
 }
 
 
