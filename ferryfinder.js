@@ -259,50 +259,7 @@ function searchByCrossing() {
          //add the operators to the ferry card
          card.appendChild(operatorSection);
        
-       /*
-         ferry.operators.forEach(operatorName => {
-             const operatorItem = document.createElement('li');
-             operatorItem.classList.add('operator-item');
-             
-             const emoji = document.createElement('span');
-             emoji.classList.add('emoji');
-             emoji.textContent = '🚢';
-             operatorItem.appendChild(emoji);
-             
-             const matchingOperator = ferryOperators.find(op => op.operator === operatorName);
-             
-             if (matchingOperator) {
-                 const link = document.createElement('a');
-                 link.classList.add('operator-link');
-                 link.href = matchingOperator.link;
-                 link.textContent = `${matchingOperator.operator} (Rating: ${matchingOperator.travelbetterRating})`;
-                 link.target = "_blank";
-                 operatorItem.appendChild(link);
-             } else {
-                 operatorItem.textContent = operatorName;
-             }
-
-             operatorList.appendChild(operatorItem);
-         });
-         
-         //Add the operator list to the operator sector
-         operatorSection.appendChild(operatorList);
-         
-         //add the operators to the ferry card
-         card.appendChild(operatorSection);
-         */
-         /*
-         //foot passenger
-         const footPassenger = document.createElement('p');
-         footPassenger.textContent = `Foot Passengers: ${ferry.foot_passenger ? '✅' : '❌'}`;
-
-
-         card.appendChild(footPassenger);
-         
-         //Dog Friendly
-         const dogFriendly = document.createElement('p');
-         dogFriendly.textContent = `Dog Friendly: ${ferry.dog_friendly ? '✅' : '❌'}`;
-         card.appendChild(dogFriendly);*/
+      
 
 
          //Load up the tags-features
@@ -341,7 +298,9 @@ function searchByCrossing() {
 }
 
 function searchByOperator() {
+  console.log("Search By Operator");
   const selectedOperator = document.getElementById("ferryProvider").value;
+  console.log("Operator Selected "+selectedOperator);
   const resultsContainer = document.getElementById("providerResults");
   resultsContainer.innerHTML = "";
 
@@ -405,6 +364,7 @@ function searchByOperator() {
 
     //look up the operator in the ferry operator file
     if (selectedOperator) {
+      console.log("Search By Operator - Creating Book now Link...");
       const operatorData = ferryOperators.find(op =>
         op.operatorName.toLowerCase().includes(selectedOperator)
       );
