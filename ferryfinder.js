@@ -431,6 +431,7 @@ if (operatorData) {
   bookLink.className = "bookButton";
   operatorCard.appendChild(bookLink);
 
+  /*
   if (operatorData.moreInfoLink) {
     const tipsLink = document.createElement("a");
     tipsLink.href = operatorData.moreInfoLink;
@@ -439,7 +440,7 @@ if (operatorData) {
     tipsLink.rel = "noopener noreferrer";
     tipsLink.className = "infoButton";
     operatorCard.appendChild(tipsLink);
-  }
+  }*/
 
   resultsContainer.appendChild(operatorCard);
 }
