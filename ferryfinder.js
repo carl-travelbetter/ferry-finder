@@ -380,6 +380,42 @@ function searchByOperator() {
     return;
   }
 
+
+  //Build the operator card
+  const operatorData = ferryOperators.find(op =>
+  op.operatorName.toLowerCase() === selectedOperator.toLowerCase()
+);
+  
+if (operatorData) {
+  const operatorCard = document.createElement("div");
+  operatorCard.className = "operatorCard fade-in";
+
+  const title = document.createElement("h2");
+  title.textContent = `🚢 ${operatorData.operatorName}`;
+  operatorCard.appendChild(title);
+
+  const rating = document.createElement("p");
+  rating.textContent = `⭐ Travelbetter Rating: ${operatorData.travelbetterRating || "N/A"}`;
+  operatorCard.appendChild(rating);
+
+  if (operatorData.notes) {
+    const notes = document.createElement("p");
+    notes.textContent = `📝 ${operatorData.notes}`;
+    operatorCard.appendChild(notes);
+  }
+
+  const bookLink = document.createElement("a");
+  bookLink.href = operatorData.link;
+  bookLink.textContent = "Visit Website / Book Now";
+  bookLink.target = "_blank";
+  bookLink.rel = "noopener noreferrer";
+  bookLink.className = "bookButton";
+  operatorCard.appendChild(bookLink);
+
+  resultsContainer.appendChild(operatorCard);
+}
+
+
   const matchingRoutes = ferryRoutes.filter(route =>
     route.operator1 === selectedOperator ||
     route.operator2 === selectedOperator ||
