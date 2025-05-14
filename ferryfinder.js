@@ -399,10 +399,10 @@ if (operatorData) {
   rating.textContent = `⭐ Travelbetter Rating: ${operatorData.travelbetterRating || "N/A"}`;
   operatorCard.appendChild(rating);
 
-  if (operatorData.notes) {
-    const notes = document.createElement("p");
-    notes.textContent = `📝 ${operatorData.notes}`;
-    operatorCard.appendChild(notes);
+  if (operatorData.amendmentPolicy) {
+    const amendmentPolicy = document.createElement("p");
+    amendmentPolicy.textContent = `📝 ${operatorData.amendmentPolicy}`;
+    operatorCard.appendChild(amendmentPolicy);
   }
 
   const bookLink = document.createElement("a");
