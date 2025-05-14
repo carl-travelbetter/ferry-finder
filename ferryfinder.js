@@ -387,6 +387,7 @@ function searchByOperator() {
 );
   
 if (operatorData) {
+  console.log("Create Operator Card");
   const operatorCard = document.createElement("div");
   operatorCard.className = "operatorCard fade-in";
 
