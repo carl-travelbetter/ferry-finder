@@ -412,12 +412,13 @@ if (operatorData) {
   bookLink.rel = "noopener noreferrer";
   bookLink.className = "bookButton";
   operatorCard.appendChild(bookLink);
-  const routeTitle = document.createElement("h2");
-  routeTitle.textContent = "Routes they offer";
-  operatorCard.appendChild(routeTitle);
+ 
   resultsContainer.appendChild(operatorCard);
 }
 
+  const routeTitle = document.createElement("h2");
+  routeTitle.textContent = "Routes they offer";
+  resultsContainer.appendChild(routeTitle);
 
   const matchingRoutes = ferryRoutes.filter(route =>
     route.operator1 === selectedOperator ||
