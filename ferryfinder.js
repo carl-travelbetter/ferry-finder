@@ -70,6 +70,25 @@ document.addEventListener("DOMContentLoaded", () => {
   showSection("need");
 });
 
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("operator-link") && e.target.dataset.operatorname) {
+    const operatorName = e.target.dataset.operatorname;
+    
+    // Update dropdown value
+    const operatorDropdown = document.getElementById("ferryProvider");
+    operatorDropdown.value = operatorName;
+
+    // Switch to Operator section
+    showSection("operator");
+
+    // Trigger operator search
+    searchByOperator();
+
+    // Optional: scroll to top or specific anchor
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+});
+
 
 function createTagButtons() {
   const container = document.getElementById("tagFilters");
@@ -218,6 +237,9 @@ function searchByCrossing() {
                const operator1Link = document.createElement('a');
                operator1Link.classList.add('operator-link');
                operator1Link.href = operator.link;
+               operator1Link.dataset.operatorname = operator.operatorName;
+              operator1Link.target = "_blank";  // Open external link in new tab
+              operator1Link.rel = "noopener noreferrer";
                operator1Link.textContent = ` ${operator.operatorName} (Rating: ${operator.travelbetterRating})`;
                operatorItem1.appendChild(operator1Link);
                operatorList.appendChild(operatorItem1);
@@ -253,6 +275,9 @@ function searchByCrossing() {
              const operatorLink = document.createElement('a');
              operatorLink.classList.add('operator-link');
              operatorLink.href = operator.link;
+             operatorLink.dataset.operatorname = operator.operatorName;
+              operatorLink.target = "_blank";  // Open external link in new tab
+              operatorLink.rel = "noopener noreferrer";
              operatorLink.textContent = ` ${operator.operatorName} (Rating: ${operator.travelbetterRating})`;
              operatorItem2.appendChild(operatorLink);
              operatorList.appendChild(operatorItem2);
@@ -286,6 +311,9 @@ function searchByCrossing() {
              const operatorLink = document.createElement('a');
              operatorLink.classList.add('operator-link');
              operatorLink.href = operator.link;
+              operatorLink.dataset.operatorname = operator.operatorName;
+              operatorLink.target = "_blank";  // Open external link in new tab
+              operatorLink.rel = "noopener noreferrer";
              operatorLink.textContent = ` ${operator.operatorName} (Rating: ${operator.travelbetterRating})`;
              operatorItem3.appendChild(operatorLink);
              operatorList.appendChild(operatorItem3);
