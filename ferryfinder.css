@@ -184,7 +184,7 @@ main, .app {
 }
 
 @media (max-width: 480px) {
-  .ferryCard, .operatorCard {
+  .ferryCard {
     padding: 0.75rem;
   }
 }
@@ -299,9 +299,7 @@ main, .app {
   text-align: left;
 }
 
-.operatorCard:hover {
-  transform: translateY(-3px);
-}
+
 
 .operatorCard h3 {
   margin-top: 0;
