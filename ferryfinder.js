@@ -412,7 +412,9 @@ if (operatorData) {
   bookLink.rel = "noopener noreferrer";
   bookLink.className = "bookButton";
   operatorCard.appendChild(bookLink);
-
+  const routeTitle = document.createElement("h2");
+  routeTitle.textContent = "Routes they offer";
+  operatorCard.appendChild(routeTitle);
   resultsContainer.appendChild(operatorCard);
 }
 
@@ -427,10 +429,7 @@ if (operatorData) {
     resultsContainer.innerHTML = "<p>No routes found for that operator.</p>";
     return;
   }
-  else
-  {
-    resultsContainer.innerHTML = "<h2>Route they Operate</h2>";
-  }
+  
 
   matchingRoutes.forEach(ferry => {
     const card = document.createElement("div");
