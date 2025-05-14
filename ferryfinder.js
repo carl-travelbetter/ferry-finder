@@ -387,7 +387,6 @@ function searchByOperator() {
 );
   
 if (operatorData) {
-  console.log("Create Operator Card");
   const operatorCard = document.createElement("div");
   operatorCard.className = "operatorCard fade-in";
 
@@ -399,11 +398,30 @@ if (operatorData) {
   rating.textContent = `⭐ Travelbetter Rating: ${operatorData.travelbetterRating || "N/A"}`;
   operatorCard.appendChild(rating);
 
-  if (operatorData.amendmentPolicy) {
-    const amendmentPolicy = document.createElement("p");
-    amendmentPolicy.textContent = `📝 ${operatorData.amendmentPolicy}`;
-    operatorCard.appendChild(amendmentPolicy);
-  }
+  const amend = document.createElement("p");
+  amend.textContent = `🔁 Amendments: ${operatorData.amendmentPolicy}`;
+  operatorCard.appendChild(amend);
+
+  const cancel = document.createElement("p");
+  cancel.textContent = `❌ Cancellations: ${operatorData.cancellationPolicy}`;
+  operatorCard.appendChild(cancel);
+
+  const flags = document.createElement("ul");
+  flags.className = "operator-flags";
+  
+  const flagItems = [
+    { label: "Foot Passengers", value: operatorData.footPassengers, icon: "👣" },
+    { label: "Dog Friendly", value: operatorData.dogFriendly, icon: "🐶" },
+    { label: "Accessibility Support", value: operatorData.accessibilitySupport, icon: "♿" }
+  ];
+
+  flagItems.forEach(flag => {
+    const li = document.createElement("li");
+    li.textContent = `${flag.icon} ${flag.label}: ${flag.value ? "✅" : "❌"}`;
+    flags.appendChild(li);
+  });
+
+  operatorCard.appendChild(flags);
 
   const bookLink = document.createElement("a");
   bookLink.href = operatorData.link;
@@ -412,9 +430,20 @@ if (operatorData) {
   bookLink.rel = "noopener noreferrer";
   bookLink.className = "bookButton";
   operatorCard.appendChild(bookLink);
- 
+
+  if (operatorData.moreInfoLink) {
+    const tipsLink = document.createElement("a");
+    tipsLink.href = operatorData.moreInfoLink;
+    tipsLink.textContent = "🧭 View Travelbetter Tips";
+    tipsLink.target = "_blank";
+    tipsLink.rel = "noopener noreferrer";
+    tipsLink.className = "infoButton";
+    operatorCard.appendChild(tipsLink);
+  }
+
   resultsContainer.appendChild(operatorCard);
 }
+
 
   const routeTitle = document.createElement("h2");
   routeTitle.textContent = "Routes they offer";
