@@ -427,6 +427,10 @@ if (operatorData) {
     resultsContainer.innerHTML = "<p>No routes found for that operator.</p>";
     return;
   }
+  else
+  {
+    resultsContainer.innerHTML = "<h2>Route they Operate</h2>";
+  }
 
   matchingRoutes.forEach(ferry => {
     const card = document.createElement("div");
