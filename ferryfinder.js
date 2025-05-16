@@ -2,6 +2,7 @@
 let ferryOperators = [];
 let ferryRoutes = [];
 let ferryTags = [];
+let activeTags = [];
 
 fetch('ferry-operators.json')
   .then(response => response.json())
@@ -125,6 +126,9 @@ function updateNeedSearch() {
     selected.every(tag => route.tags.includes(tag))
   );
 
+  //copy select to activeTags
+  activeTags = selected;
+  
   if (matchingRoutes.length === 0) {
     results.innerHTML = "<p>No matching routes found. Try adjusting your filters.</p>";
     return;
@@ -447,7 +451,7 @@ if (operatorData) {
 
 
   const routeTitle = document.createElement("h2");
-  routeTitle.textContent = "Routes they offer";
+  routeTitle.textContent = "Routes they offer that match your needs";
   resultsContainer.appendChild(routeTitle);
 
   const matchingRoutes = ferryRoutes.filter(route =>
