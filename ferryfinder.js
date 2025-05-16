@@ -464,9 +464,30 @@ if (operatorData) {
     resultsContainer.innerHTML = "<p>No routes found for that operator.</p>";
     return;
   }
+
   
 
   matchingRoutes.forEach(ferry => {
+
+    //if passes needs test then create route card
+    let needsTest = true;
+    activeTags.forEach(tag => {
+
+    console.log("Looking for "+tag);
+    const matchingTag = ferry.find(tag => tag.Id === featureTag);
+           if (matchingTag)
+           {
+             console.log("Tag found");      
+           }
+           else 
+           { 
+             console.log("No Matching Tag Found");
+             needsTest = false;
+           }
+      
+    });
+
+    if (needsTest) {
     const card = document.createElement("div");
     card.className = "ferryCard fade-in";
 
@@ -515,20 +536,23 @@ if (operatorData) {
         op.operatorName.toLowerCase().includes(selectedOperator.toLowerCase())
       );
 
-  if (operatorData && operatorData.link) {
-    const bookNow = document.createElement("a");
-    bookNow.href = operatorData.link;
-    bookNow.textContent = "Book Now";
-    bookNow.className = "bookButton";
-    bookNow.target = "_blank";
-    bookNow.rel = "noopener noreferrer";
-    bookNow.title = "Affiliate link – opens in new tab";
-    card.appendChild(bookNow);
-  }
-}
+      if (operatorData && operatorData.link) {
+        const bookNow = document.createElement("a");
+        bookNow.href = operatorData.link;
+        bookNow.textContent = "Book Now";
+        bookNow.className = "bookButton";
+        bookNow.target = "_blank";
+        bookNow.rel = "noopener noreferrer";
+        bookNow.title = "Affiliate link – opens in new tab";
+        card.appendChild(bookNow);
+      }
+      
+    }
 
     resultsContainer.appendChild(card);
+    } //end of if needsTest
   });
+
 }
 
 
