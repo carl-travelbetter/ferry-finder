@@ -473,21 +473,7 @@ if (operatorData) {
     let needsTest = true;
     
       
-    activeTags.forEach(tag => {
-
-    console.log("Looking for "+tag);
-    const matchingTag = ferry.find(tag => tag.Id === featureTag);
-           if (matchingTag)
-           {
-             console.log("Tag found");      
-           }
-           else 
-           { 
-             console.log("No Matching Tag Found");
-             needsTest = false;
-           }
-      
-    });
+    let needsTest = activeTags.every(tag => ferry.tags.includes(tag));
 
     if (needsTest) {
     const card = document.createElement("div");
