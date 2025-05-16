@@ -471,6 +471,8 @@ if (operatorData) {
 
     //if passes needs test then create route card
     let needsTest = true;
+    
+      
     activeTags.forEach(tag => {
 
     console.log("Looking for "+tag);
