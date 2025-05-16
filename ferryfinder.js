@@ -470,9 +470,6 @@ if (operatorData) {
   matchingRoutes.forEach(ferry => {
 
     //if passes needs test then create route card
-    let needsTest = true;
-    
-      
     let needsTest = activeTags.every(tag => ferry.tags.includes(tag));
 
     if (needsTest) {
