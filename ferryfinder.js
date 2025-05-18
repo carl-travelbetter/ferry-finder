@@ -67,7 +67,7 @@ function clearAllSearches() {
 
 //New Onload functions with listeners fo each toggle button.
 document.addEventListener("DOMContentLoaded", () => {
- 
+  console.log("Document Loading...");
   // Toggle view buttons
   const showRoutesBtn = document.getElementById("showRoutesBtn");
   const showOperatorsBtn = document.getElementById("showOperatorsBtn");
