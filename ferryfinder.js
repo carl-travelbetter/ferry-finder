@@ -17,6 +17,8 @@ fetch('ferry-routes.json')
   .then(data => {
     ferryRoutes = data;
     console.log("Ferry Routes loaded:", ferryRoutes);
+     // ✅ Render routes after data is loaded and DOM is ready
+    renderAllRoutes();
   })
   .catch(error => console.error("Error loading ferry data:", error));
 
@@ -87,8 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showRoutesBtn.classList.remove("active");
     renderAllOperators(); // also filtered by tags
   });
-  // ✅ Trigger the default "Routes" view
-  showRoutesBtn.click();
+ 
 });
 
 function renderAllRoutes() {
