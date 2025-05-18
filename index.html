@@ -28,6 +28,10 @@
                 <div style="text-align: center; margin-top: 1rem;">
                   <button id="clearFilters" class="searchButton">Clear Filters</button>
                 </div>
+                <div id="viewToggle" class="view-toggle">
+                  <button id="showRoutesBtn" class="toggle-btn active">Show Routes</button>
+                  <button id="showOperatorsBtn" class="toggle-btn">Show Operators</button>
+                </div>
             </div>
         </div>
         </div>
@@ -38,9 +42,12 @@
         <!-- Optional summary of current use case -->
         <h2>Cross Channel Ferries</h2>
         <p>Showing all routes and operators. Use the filters above to refine the results.</p>
+        <!-- This shows route cards directly -->
+        <div id="routeResults"></div>
 
-        <!-- Operator view with routes -->
-        <div id="operatorResults"></div>
+        <!-- This shows operators and their matching routes -->
+        <div id="operatorResults" style="display: none;"></div>
+        
       <!--  <div class="searchModeToggle" style="text-align: center; margin-bottom: 1rem;">
           <button class="searchButton" onclick="showSection('crossing')">Search by Route</button>
           <button class="searchButton" onclick="showSection('need')">Search by Needs</button>
@@ -53,9 +60,9 @@
           Filters cleared.
         </div>
 
-           <div id="needResults" class="crossingResults"></div>
+       <!-- <div id="needResults" class="crossingResults"></div> -->
        
-        <div id="searchSection-crossing"> 
+       <!-- <div id="searchSection-crossing"> 
             <div class="searchByCrossing">
                 <h2>Search By Ferry Route</h2>
                 <p>Looking to understand the suitability and options of each cross channel ferry route? Just select your route below and we show you everything you need to know</p>
@@ -79,11 +86,11 @@
                    
                 </div>
             </div>
-        </div>
-        <div id="searchSection-operator">
+        </div> -->
+       <!-- <div id="searchSection-operator">
             <div class="searchByProvider">
                 <!-- Search by Operator -->
-              <h2>Search By Operator</h2>
+        <!--      <h2>Search By Operator</h2>
               <label for="ferryProvider">Choose an Operator</label>
               <select id="ferryProvider">
                 <option value="">-- Select Operator --</option>
@@ -97,7 +104,7 @@
               <button class="searchButton" onclick="searchByOperator()">Search</button>
               <div class="providerResults" id="providerResults"></div>
             </div>
-        </div>
+        </div> -->
 
             <div class="feedback">
                 <h2>Feedback to us</h2>
