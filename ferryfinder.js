@@ -57,6 +57,16 @@ document.addEventListener("DOMContentLoaded", () => {
     showRoutesBtn.classList.remove("active");
     renderAllOperators(); // also filtered by tags
   });
+
+   const clearButton = document.getElementById('clearFilters');
+  if (clearButton) {
+    clearButton.addEventListener('click', () => {
+      document.querySelectorAll('.tag-btn.active').forEach(btn => {
+        btn.classList.remove('active');
+      });
+       renderAllRoutes(); 
+    });
+  }
  
 });
 
@@ -666,7 +676,7 @@ function refreshActiveSection() {
 }*/
 
 
-
+/*
 document.addEventListener('DOMContentLoaded', () => {
   const clearButton = document.getElementById('clearFilters');
   if (clearButton) {
@@ -677,6 +687,6 @@ document.addEventListener('DOMContentLoaded', () => {
        renderAllRoutes(); 
     });
   }
-});
+});*/
 
 
