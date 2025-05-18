@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clearButton.addEventListener('click', () => {
       document.querySelectorAll('.tag-btn.active').forEach(btn => {
         btn.classList.remove('active');
+        activeTags = [];
       });
        renderAllRoutes(); 
     });
