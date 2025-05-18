@@ -31,41 +31,9 @@ fetch('ferry-tags.json')
   })
   .catch(error => console.error("Error loading ferry data:", error));
 
-//search selection control
-function showSection(section) {
-  const sections = ["crossing", "need", "operator"];
-  sections.forEach(id => {
-    const el = document.getElementById(`searchSection-${id}`);
-    if (el) {
-      el.style.display = (id === section) ? "block" : "none";
-    }
-  });
-}
 
-function clearAllSearches() {
-  console.log("Clear All Searches...");
-  // Clear dropdowns
-  document.getElementById("ferryRoute").value = "";
-  document.getElementById("ferryProvider").value = "";
 
-  // Clear tag selections
-  document.querySelectorAll(".tag-btn.active").forEach(btn => {
-    btn.classList.remove("active");
-  });
 
-  // Clear all result sections
-  document.getElementById("crossingResults").innerHTML = "";
-  document.getElementById("needResults").innerHTML = "";
-  document.getElementById("providerResults").innerHTML = "";
-
-  // Show confirmation message
-  const message = document.getElementById("clearMessage");
-  message.style.display = "block";
-
-  setTimeout(() => {
-    message.style.display = "none";
-  }, 2000);
-}
 
 //New Onload functions with listeners fo each toggle button.
 document.addEventListener("DOMContentLoaded", () => {
@@ -682,7 +650,7 @@ if (operatorData) {
 
 }
 
-
+/*
 function refreshActiveSection() {
   const currentSection = document.querySelector(".search-section:where(:not([style*='display: none']))");
 
@@ -695,7 +663,7 @@ function refreshActiveSection() {
       updateNeedSearch();
     }
   }
-}
+}*/
 
 
 
