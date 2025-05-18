@@ -251,24 +251,30 @@ main, .app {
   }
 }
 
+#tagFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #f0f4f8;
+  border-bottom: 2px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 .tag-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.4rem 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 1.5rem;
   background-color: #fff;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  margin: 0.3rem;
-  transition: background-color 0.2s, border-color 0.2s;
+}
+.tag-btn.active {
+  background-color: #0077cc;
+  color: #fff;
+  border-color: #0077cc;
 }
 
-.tag-btn.active {
-  background-color: #e0f2fe;
-  border-color: #0284c7;
-  font-weight: bold;
-}
 
 .bookButton {
   display: inline-block;
