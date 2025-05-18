@@ -32,11 +32,20 @@
         </div>
         </div>
     <div class="app">
-        <div class="searchModeToggle" style="text-align: center; margin-bottom: 1rem;">
+        <!-- Tag filters always at top -->
+        <div id="tagFilters" class="tag-bar"></div>
+
+        <!-- Optional summary of current use case -->
+        <h2>Cross Channel Ferries</h2>
+        <p>Showing all routes and operators. Use the filters above to refine the results.</p>
+
+        <!-- Operator view with routes -->
+        <div id="operatorResults"></div>
+      <!--  <div class="searchModeToggle" style="text-align: center; margin-bottom: 1rem;">
           <button class="searchButton" onclick="showSection('crossing')">Search by Route</button>
           <button class="searchButton" onclick="showSection('need')">Search by Needs</button>
           <button class="searchButton" onclick="showSection('operator')">Search by Operator</button>
-        </div>
+        </div> -->
         <div style="text-align: center; margin-bottom: 2rem;">
           <button class="searchButton" onclick="clearAllSearches()">Clear All</button>
         </div>
