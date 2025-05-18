@@ -67,6 +67,8 @@ function clearAllSearches() {
 
 //New Onload functions with listeners fo each toggle button.
 document.addEventListener("DOMContentLoaded", () => {
+  //Clear all active tags
+  activeTags = [];
   // Initial render
   renderAllRoutes();
 
