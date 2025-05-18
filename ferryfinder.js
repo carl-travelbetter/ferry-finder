@@ -103,8 +103,15 @@ function createTagButtons() {
     
     button.addEventListener("click", () => {
       button.classList.toggle("active");
-      updateNeedSearch();
+    
+      const selected = Array.from(document.querySelectorAll('.tag-btn.active'))
+        .map(btn => btn.dataset.tag);
+    
+      activeTags = selected;
+    
+      refreshActiveSection();  // dynamic based on which view is showing
     });
+
 
     container.appendChild(button);
   });
@@ -127,7 +134,7 @@ function updateNeedSearch() {
   );
 
   //copy select to activeTags
-  activeTags = selected;
+  //activeTags = selected;
   
   if (matchingRoutes.length === 0) {
     results.innerHTML = "<p>No matching routes found. Try adjusting your filters.</p>";
@@ -539,6 +546,22 @@ if (operatorData) {
   });
 
 }
+
+
+function refreshActiveSection() {
+  const currentSection = document.querySelector(".search-section:where(:not([style*='display: none']))");
+
+  if (currentSection) {
+    if (currentSection.id.includes("crossing")) {
+      searchByCrossing();
+    } else if (currentSection.id.includes("operator")) {
+      searchByOperator();
+    } else {
+      updateNeedSearch();
+    }
+  }
+}
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
