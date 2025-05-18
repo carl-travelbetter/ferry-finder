@@ -65,30 +65,161 @@ function clearAllSearches() {
   }, 2000);
 }
 
-
-// Show the default section on load (Route)
+//New Onload functions with listeners fo each toggle button.
 document.addEventListener("DOMContentLoaded", () => {
-  showSection("need");
+  // Initial render
+  renderAllRoutes();
+
+  // Toggle view buttons
+  const showRoutesBtn = document.getElementById("showRoutesBtn");
+  const showOperatorsBtn = document.getElementById("showOperatorsBtn");
+
+  showRoutesBtn.addEventListener("click", () => {
+    document.getElementById("routeResults").style.display = "block";
+    document.getElementById("operatorResults").style.display = "none";
+    showRoutesBtn.classList.add("active");
+    showOperatorsBtn.classList.remove("active");
+    renderAllRoutes(); // re-render in case filters changed
+  });
+
+  showOperatorsBtn.addEventListener("click", () => {
+    document.getElementById("routeResults").style.display = "none";
+    document.getElementById("operatorResults").style.display = "block";
+    showOperatorsBtn.classList.add("active");
+    showRoutesBtn.classList.remove("active");
+    renderAllOperators(); // also filtered by tags
+  });
 });
 
-document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("operator-link") && e.target.dataset.operatorname) {
-    const operatorName = e.target.dataset.operatorname;
-    
-    // Update dropdown value
-    const operatorDropdown = document.getElementById("ferryProvider");
-    operatorDropdown.value = operatorName;
+function renderAllRoutes() {
+  const container = document.getElementById("routeResults");
+  container.innerHTML = "";
 
-    // Switch to Operator section
-    showSection("operator");
+  const matchingRoutes = ferryRoutes.filter(route =>
+    activeTags.length === 0 || activeTags.every(tag => route.tags.includes(tag))
+  );
 
-    // Trigger operator search
-    searchByOperator();
-
-    // Optional: scroll to top or specific anchor
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  if (matchingRoutes.length === 0) {
+    container.innerHTML = "<p>No routes match your selected needs.</p>";
+    return;
   }
-});
+
+  matchingRoutes.forEach(ferry => {
+    const card = document.createElement("div");
+    card.className = "ferryCard routeCard fade-in";
+
+    const title = document.createElement("h2");
+    title.textContent = ferry.route;
+    card.appendChild(title);
+
+    const notes = document.createElement("p");
+    notes.textContent = ferry.notes || "No notes for this route";
+    card.appendChild(notes);
+
+    const crossing = document.createElement("p");
+    crossing.textContent = `Crossing Time: ${ferry.dayCrossingTimeMins || "N/A"} mins`;
+    card.appendChild(crossing);
+
+    const price = document.createElement("p");
+    price.textContent = `Prices From: ${ferry.pricesFrom || "Unknown"}`;
+    card.appendChild(price);
+
+    const tagList = document.createElement("div");
+    ferry.tags.forEach(tagId => {
+      const tag = ferryTags.find(t => t.Id === tagId);
+      if (tag) {
+        const tagEl = document.createElement("p");
+        tagEl.textContent = `${tag.Icon} ${tag.Label}`;
+        tagList.appendChild(tagEl);
+      }
+    });
+    card.appendChild(tagList);
+
+    container.appendChild(card);
+  });
+}
+
+function renderAllOperators() {
+  const container = document.getElementById("operatorResults");
+  container.innerHTML = "";
+
+  ferryOperators.forEach(operator => {
+    const matchingRoutes = ferryRoutes.filter(route =>
+      (route.operator1 === operator.operatorName ||
+        route.operator2 === operator.operatorName ||
+        route.operator3 === operator.operatorName) &&
+      (activeTags.length === 0 || activeTags.every(tag => route.tags.includes(tag)))
+    );
+
+    if (matchingRoutes.length === 0) return;
+
+    const operatorCard = document.createElement("div");
+    operatorCard.className = "operatorCard fade-in";
+
+    const title = document.createElement("h2");
+    title.textContent = `🚢 ${operator.operatorName}`;
+    operatorCard.appendChild(title);
+
+    const rating = document.createElement("p");
+    rating.textContent = `⭐ Travelbetter Rating: ${operator.travelbetterRating || "N/A"}`;
+    operatorCard.appendChild(rating);
+
+    const amend = document.createElement("p");
+    amend.textContent = `🔁 Amendments: ${operator.amendmentPolicy}`;
+    operatorCard.appendChild(amend);
+
+    const cancel = document.createElement("p");
+    cancel.textContent = `❌ Cancellations: ${operator.cancellationPolicy}`;
+    operatorCard.appendChild(cancel);
+
+    const flags = document.createElement("ul");
+    [
+      { label: "Foot Passengers", value: operator.footPassengers, icon: "👣" },
+      { label: "Dog Friendly", value: operator.dogFriendly, icon: "🐶" },
+      { label: "Accessibility", value: operator.accessibilitySupport, icon: "♿" }
+    ].forEach(flag => {
+      const li = document.createElement("li");
+      li.textContent = `${flag.icon} ${flag.label}: ${flag.value ? "✅" : "❌"}`;
+      flags.appendChild(li);
+    });
+    operatorCard.appendChild(flags);
+
+    const bookLink = document.createElement("a");
+    bookLink.href = operator.link;
+    bookLink.className = "bookButton";
+    bookLink.target = "_blank";
+    bookLink.rel = "noopener noreferrer";
+    bookLink.textContent = "Visit Website / Book Now";
+    operatorCard.appendChild(bookLink);
+
+    // Add their matching routes
+    matchingRoutes.forEach(route => {
+      const routeCard = document.createElement("div");
+      routeCard.className = "ferryCard routeCard";
+
+      const rTitle = document.createElement("h3");
+      rTitle.textContent = route.route;
+      routeCard.appendChild(rTitle);
+
+      const rNotes = document.createElement("p");
+      rNotes.textContent = route.notes || "No notes";
+      routeCard.appendChild(rNotes);
+
+      const rTime = document.createElement("p");
+      rTime.textContent = `Crossing Time: ${route.dayCrossingTimeMins || "N/A"} mins`;
+      routeCard.appendChild(rTime);
+
+      const rPrice = document.createElement("p");
+      rPrice.textContent = `Prices From: ${route.pricesFrom}`;
+      routeCard.appendChild(rPrice);
+
+      operatorCard.appendChild(routeCard);
+    });
+
+    container.appendChild(operatorCard);
+  });
+}
+
 
 
 function createTagButtons() {
@@ -104,13 +235,16 @@ function createTagButtons() {
     button.addEventListener("click", () => {
       button.classList.toggle("active");
     
-      const selected = Array.from(document.querySelectorAll('.tag-btn.active'))
+      activeTags = Array.from(document.querySelectorAll('.tag-btn.active'))
         .map(btn => btn.dataset.tag);
     
-      activeTags = selected;
-    
-      refreshActiveSection();  // dynamic based on which view is showing
-    });
+      const isOperatorView = document.getElementById("operatorResults").style.display === "block";
+      if (isOperatorView) {
+        renderAllOperators();
+      } else {
+        renderAllRoutes();
+      }
+});
 
 
     container.appendChild(button);
