@@ -68,9 +68,6 @@ function clearAllSearches() {
 //New Onload functions with listeners fo each toggle button.
 document.addEventListener("DOMContentLoaded", () => {
  
-  // Initial render
-  renderAllRoutes();
-
   // Toggle view buttons
   const showRoutesBtn = document.getElementById("showRoutesBtn");
   const showOperatorsBtn = document.getElementById("showOperatorsBtn");
@@ -90,6 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
     showRoutesBtn.classList.remove("active");
     renderAllOperators(); // also filtered by tags
   });
+  // ✅ Trigger the default "Routes" view
+  showRoutesBtn.click();
 });
 
 function renderAllRoutes() {
