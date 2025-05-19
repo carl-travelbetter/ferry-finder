@@ -115,10 +115,45 @@ function renderAllRoutes() {
     });
     card.appendChild(tagList);
 
-    const operatorOne = document.createElement("p");
-    operatorOne.textContent = `Serviced by: ${ferry.operator1}`;
-    card.appendChild(operatorOne);  
+   //Operator list
+         const operatorList = document.createElement('ul');
+         operatorList.classList.add('operator-list');
+
+         //Find Operator 1
+         const operatorItem1 = document.createElement('li');
+         operatorItem1.classList.add('operator-item');
+         const operator1 = ferry.operator1;
+         if (operator1)
+         {
+           const matchingOperators = ferryOperators.filter(operator => 
+           operator.operatorName.includes(operator1));
+
+            matchingOperators.forEach(operator => {
+               console.log("Matching Operator "+operator.operatorName);
+               const emoji = document.createElement('span');
+               emoji.classList.add('emoji');
+               emoji.textContent = '🚢';
+         
+              
+               operatorItem1.appendChild(emoji);  
+               const operator1Link = document.createElement('a');
+               operator1Link.classList.add('operator-link');
+               operator1Link.href = operator.link;
+               operator1Link.dataset.operatorname = operator.operatorName;
+              operator1Link.target = "_blank";  // Open external link in new tab
+              operator1Link.rel = "noopener noreferrer";
+               operator1Link.textContent = ` ${operator.operatorName} (Rating: ${operator.travelbetterRating})`;
+               operatorItem1.appendChild(operator1Link);
+               operatorList.appendChild(operatorItem1);
     
+               
+          });
+        }
+        else
+        {
+          console.log("No Operator 1");
+        }
+    card.append(operatorList);
     container.appendChild(card);
   });
 }
