@@ -114,9 +114,7 @@ function renderAllRoutes() {
       }
     });
     card.appendChild(tagList);
-    const operatorSection = document.createElement("h3");
-    operatorSection.textContent = "Ferry Options For This Route";
-    card.appendChild(operatorSection);
+   
    //Operator list
          const operatorList = document.createElement('ul');
          operatorList.classList.add('operator-list');
@@ -127,6 +125,10 @@ function renderAllRoutes() {
          const operator1 = ferry.operator1;
          if (operator1)
          {
+           const operatorSection = document.createElement("h3");
+           operatorSection.textContent = "Ferry Options For This Route";
+           card.appendChild(operatorSection);
+           
            const matchingOperators = ferryOperators.filter(operator => 
            operator.operatorName.includes(operator1));
 
@@ -215,7 +217,7 @@ function renderAllRoutes() {
               operatorLink.target = "_blank";  // Open external link in new tab
               operatorLink.rel = "noopener noreferrer";
                operatorLink.textContent = ` ${operator.operatorName} (Rating: ${operator.travelbetterRating})`;
-               operatorItem2.appendChild(operatorLink);
+               operatorItem3.appendChild(operatorLink);
                operatorList.appendChild(operatorItem3);
     
                
