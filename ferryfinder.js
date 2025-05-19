@@ -115,6 +115,10 @@ function renderAllRoutes() {
     });
     card.appendChild(tagList);
 
+    const operatorOne = document.createElement("p");
+    operatorOne.textContent = `Serviced by: ${ferry.operator1}`;
+    card.appendChild(operatorOne);  
+    
     container.appendChild(card);
   });
 }
@@ -193,6 +197,8 @@ function renderAllOperators() {
       rPrice.textContent = `Prices From: ${route.pricesFrom}`;
       routeCard.appendChild(rPrice);
 
+      
+      
       operatorCard.appendChild(routeCard);
     });
 
