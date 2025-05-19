@@ -114,7 +114,9 @@ function renderAllRoutes() {
       }
     });
     card.appendChild(tagList);
-
+    const operatorSection = document.createElement("h3");
+    operatorSection.textContent = "Ferry Options For This Route";
+    card.appendChild(operatorSection);
    //Operator list
          const operatorList = document.createElement('ul');
          operatorList.classList.add('operator-list');
@@ -153,6 +155,77 @@ function renderAllRoutes() {
         {
           console.log("No Operator 1");
         }
+
+         //Find Operator 2
+         const operatorItem2 = document.createElement('li');
+         operatorItem2.classList.add('operator-item');
+         const operator2 = ferry.operator2;
+         if (operator2)
+         {
+           const matchingOperators = ferryOperators.filter(operator => 
+           operator.operatorName.includes(operator2));
+
+            matchingOperators.forEach(operator => {
+               console.log("Matching Operator "+operator.operatorName);
+               const emoji = document.createElement('span');
+               emoji.classList.add('emoji');
+               emoji.textContent = '🚢';
+         
+              
+               operatorItem2.appendChild(emoji);  
+               const operatorLink = document.createElement('a');
+               operatorLink.classList.add('operator-link');
+               operatorLink.href = operator.link;
+               operatorLink.dataset.operatorname = operator.operatorName;
+              operatorLink.target = "_blank";  // Open external link in new tab
+              operatorLink.rel = "noopener noreferrer";
+               operatorLink.textContent = ` ${operator.operatorName} (Rating: ${operator.travelbetterRating})`;
+               operatorItem2.appendChild(operatorLink);
+               operatorList.appendChild(operatorItem2);
+    
+               
+          });
+        }
+        else
+        {
+          console.log("No Operator 2");
+        }
+
+        //Find Operator 3
+         const operatorItem3 = document.createElement('li');
+         operatorItem3.classList.add('operator-item');
+         const operator3 = ferry.operator2;
+         if (operator3)
+         {
+           const matchingOperators = ferryOperators.filter(operator => 
+           operator.operatorName.includes(operator3));
+
+            matchingOperators.forEach(operator => {
+               console.log("Matching Operator "+operator.operatorName);
+               const emoji = document.createElement('span');
+               emoji.classList.add('emoji');
+               emoji.textContent = '🚢';
+         
+              
+               operatorItem3.appendChild(emoji);  
+               const operatorLink = document.createElement('a');
+               operatorLink.classList.add('operator-link');
+               operatorLink.href = operator.link;
+               operatorLink.dataset.operatorname = operator.operatorName;
+              operatorLink.target = "_blank";  // Open external link in new tab
+              operatorLink.rel = "noopener noreferrer";
+               operatorLink.textContent = ` ${operator.operatorName} (Rating: ${operator.travelbetterRating})`;
+               operatorItem2.appendChild(operatorLink);
+               operatorList.appendChild(operatorItem3);
+    
+               
+          });
+        }
+        else
+        {
+          console.log("No Operator 3");
+        }
+    
     card.append(operatorList);
     container.appendChild(card);
   });
