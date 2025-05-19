@@ -196,7 +196,7 @@ function renderAllRoutes() {
         //Find Operator 3
          const operatorItem3 = document.createElement('li');
          operatorItem3.classList.add('operator-item');
-         const operator3 = ferry.operator2;
+         const operator3 = ferry.operator3;
          if (operator3)
          {
            const matchingOperators = ferryOperators.filter(operator => 
