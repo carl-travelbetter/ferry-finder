@@ -1,0 +1,17 @@
+[
+  {
+  "Id": "normandy",
+  "Label": "Normandy",
+  "Icon": "📍"
+  },
+  {
+  "Id": "caen",
+  "Label": "caen",
+  "Icon": "📍"
+  },
+  {
+  "Id": "cherbourg",
+  "Label": "Cherbourg",
+  "Icon": "📍"
+  }
+]
