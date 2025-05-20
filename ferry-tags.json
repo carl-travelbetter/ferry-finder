@@ -2,13 +2,13 @@
  {
    "Id": "quiet-friendly",
    "Label": "Quiet-Friendly",
-   "Description": "Ideal for travellers who prefer low-stimulation environments.",
+   "Description": "This route and/or ferry operator provides low-stimulation environments.",
    "Icon": "🌿"
  },
  {
    "Id": "accessible",
    "Label": "Wheelchair Accessible",
-   "Description": "This route is confirmed to support wheelchair access.",
+   "Description": "This route or operator is confirmed to support wheelchair access.",
    "Icon": "♿"
  },
  {
@@ -26,7 +26,7 @@
  {
    "Id": "cabins",
    "Label": "Cabins Available",
-   "Description": "This route offers onboard cabins or private sleeping spaces.",
+   "Description": "This route offers onboard cabins or private sleeping spaces, ideal to provide a safe space when onboard.",
    "Icon": "🛌 "
  },
  {
