@@ -1,0 +1,37 @@
+[
+  {
+  "Id": "dorset",
+  "Label": "Dorset",
+  "Icon": "📍"
+  },
+  {
+  "Id": "hampshire",
+  "Label": "Hampshire",
+  "Icon": "📍"
+  },
+  {
+  "Id": "devon",
+  "Label": "Devon",
+  "Icon": "📍"
+  },
+  {
+  "Id": "portsmouth",
+  "Label": "Portsmouth",
+  "Icon": "📍"
+  },
+  {
+  "Id": "dover",
+  "Label": "Dover",
+  "Icon": "📍"
+  },
+  {
+  "Id": "newhaven",
+  "Label": "Newhaven",
+  "Icon": "📍"
+  },
+  {
+  "Id": "plymouth",
+  "Label": "Plymouth",
+  "Icon": "📍"
+  }
+]
