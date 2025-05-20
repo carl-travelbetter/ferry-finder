@@ -46,5 +46,10 @@
    "Label": "Flexible Ferry Options",
    "Description": "Ability to board earlier or later ferries depending on availability",
    "Icon": "🕓"
- }
+ },
+ {
+  "Id": "quickest",
+  "Label": "Quickest Crossing",
+  "Icon": "🚀"
+}
 ]
