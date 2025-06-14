@@ -26,7 +26,7 @@
   {
    "Id": "night-sailings",
    "Label": "Night Sailings",
-   "Description": "Ability to board earlier or later ferries depending on availability",
+   "Description": "Night crossings available",
    "Icon": "🌙"
  },
  {
