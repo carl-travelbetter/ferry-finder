@@ -332,6 +332,7 @@ function createTagButtons() {
     //add to description
     const desP = document.createElement("p");
     desP.innerHTML = `${tag.icon} ${tag.label} ${tag.description}`;
+    console.log("***Description***");
     
     button.addEventListener("click", () => {
       button.classList.toggle("active");
