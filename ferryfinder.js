@@ -320,6 +320,7 @@ function renderAllOperators() {
 
 function createTagButtons() {
   const container = document.getElementById("tagFilters");
+  const descriptions = document.getElementById("tagDescriptions");
   if (!ferryTags.length) return;
 
   ferryTags.forEach(tag => {
@@ -327,6 +328,10 @@ function createTagButtons() {
     button.className = "tag-btn";
     button.setAttribute("data-tag", tag.Id);
     button.innerHTML = `${tag.Icon} ${tag.Label}`;
+
+    //add to description
+    const desP = document.createElement("p");
+    desP.innerHTML = `${tag.icon} ${tag.label} ${tag.description}`;
     
     button.addEventListener("click", () => {
       button.classList.toggle("active");
@@ -341,8 +346,8 @@ function createTagButtons() {
         renderAllRoutes();
       }
 });
-
-
+    
+    descriptions.appendChild(desP);
     container.appendChild(button);
   });
 }
