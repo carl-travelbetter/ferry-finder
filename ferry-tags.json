@@ -23,6 +23,12 @@
    "Description": "Foot passengers can book this route without a vehicle.",
    "Icon": "🚶"
  },
+  {
+   "Id": "night-sailings",
+   "Label": "Night Sailings",
+   "Description": "Ability to board earlier or later ferries depending on availability",
+   "Icon": "🌙"
+ },
  {
    "Id": "cabins",
    "Label": "Cabins Available",
