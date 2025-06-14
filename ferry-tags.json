@@ -38,7 +38,13 @@
  {
    "Id": "priority-boarding",
    "Label": "Priority Boarding Available",
-   "Description": "Ability to have priority boarding or disembarkation",
+   "Description": "Ability to have priority boarding",
+   "Icon": "⏩"
+ },
+ {
+   "Id": "priority-disembarking",
+   "Label": "Priority Disembarking Available",
+   "Description": "Ability to have priority disembarkation",
    "Icon": "⏩"
  },
  {
