@@ -54,6 +54,12 @@
    "Icon": "⏩"
  },
  {
+   "Id": "sensory-guide",
+   "Label": "Ferry Sensory Guide",
+   "Description": "Sensory guide available for each route or ferry to help prepare you for the journey",
+   "Icon": "🧠"
+ },
+ {
    "Id": "flexible-sailing-times",
    "Label": "Flexible Ferry Options",
    "Description": "Ability to board earlier or later ferries depending on availability",
