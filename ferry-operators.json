@@ -21,7 +21,8 @@
    "moreInfoLink": "https://travelbetter.co.uk",
    "footPassengers": true,
    "dogFriendly": true,
-   "accessibilitySupport": true
+   "accessibilitySupport": true,
+   "sensoryGuide": true
  },
  {
    "operatorID": "O0003",
