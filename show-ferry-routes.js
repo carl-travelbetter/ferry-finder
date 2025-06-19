@@ -31,4 +31,7 @@ fetch('ferry-tags.json')
   .catch(error => console.error("Error loading ferry data:", error));
 
 
-
+function renderAllRoutes()
+{
+  console.log("Render All Routes");
+}
