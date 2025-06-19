@@ -3,6 +3,15 @@ let ferryRoutes = [];
 let ferryTags = [];
 let activeTags = [];
 
+fetch('ferry-tags.json')
+  .then(response => response.json())
+  .then(data => {
+    ferryTags = data;
+    console.log("Ferry Tags loaded:", ferryTags);
+   // createTagButtons(); // load tag buttons
+  })
+  .catch(error => console.error("Error loading ferry data:", error));
+
 fetch('ferry-operators.json')
   .then(response => response.json())
   .then(data => {
@@ -21,14 +30,7 @@ fetch('ferry-routes.json')
   })
   .catch(error => console.error("Error loading ferry data:", error));
 
-fetch('ferry-tags.json')
-  .then(response => response.json())
-  .then(data => {
-    ferryTags = data;
-    console.log("Ferry Tags loaded:", ferryTags);
-   // createTagButtons(); // load tag buttons
-  })
-  .catch(error => console.error("Error loading ferry data:", error));
+
 
 
 function renderAllRoutes() {
