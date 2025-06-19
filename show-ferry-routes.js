@@ -26,7 +26,7 @@ fetch('ferry-tags.json')
   .then(data => {
     ferryTags = data;
     console.log("Ferry Tags loaded:", ferryTags);
-    createTagButtons(); // load tag buttons
+   // createTagButtons(); // load tag buttons
   })
   .catch(error => console.error("Error loading ferry data:", error));
 
