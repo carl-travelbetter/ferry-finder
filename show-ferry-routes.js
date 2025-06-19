@@ -26,7 +26,15 @@ fetch('ferry-routes.json')
     ferryRoutes = data;
     console.log("Ferry Routes loaded:", ferryRoutes);
      // ✅ Render routes after data is loaded and DOM is ready
+    if (ferryTags.length === 0)
+    {
+      console.log("Ferry Tags Not Loaded Yet");
+      const waitForTags = setTimeout(renderAllRoutes, 10000);
+    }
+    else
+    {
     renderAllRoutes();
+    }
   })
   .catch(error => console.error("Error loading ferry data:", error));
 
@@ -34,6 +42,8 @@ fetch('ferry-routes.json')
 
 
 function renderAllRoutes() {
+  
+  
   const container = document.getElementById("routeResults");
   container.innerHTML = "";
 
