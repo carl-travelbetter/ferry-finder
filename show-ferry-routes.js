@@ -34,7 +34,7 @@ fetch('ferry-routes.json')
 function populateRouteDropdown() {
   console.log("Populating Route Drop Down");
   const dropdown = document.getElementById("routeFilter");
-  const routeNames = [...new Set(ferryRoutes.map(route => route.startPort))];
+  const routeNames = [...new Set(ferryRoutes.map(route => route.route))];
 
   routeNames.sort().forEach(route => {
     const option = document.createElement("option");
@@ -45,7 +45,7 @@ function populateRouteDropdown() {
 }
 
 //show route cards 
-function renderAllRoutes() {
+function renderAllRoutes(selectedRoute) {
   
   
   const container = document.getElementById("routeResults");
@@ -209,5 +209,13 @@ function renderAllRoutes() {
   });
 }
 
+document.getElementById("routeFilter").addEventListener("change", function () {
+  const selectedRoute = this.value;
+  const filteredRoutes = selectedRoute === "all"
+    ? routesData
+    : routesData.filter(route => route.crossing === selectedRoute);
+
+  renderRoutes(filteredRoutes); // Replace with your existing rendering function
+});
 
 
