@@ -215,6 +215,13 @@ function showSelectedRoutes(routeChoice)
 {
   console.log("Show Selected Routes");
   console.log("Route Choice = "+routeChoice);
+
+  const container = document.getElementById("routeResults");
+  container.innerHTML = "";
+  
+  const matchingRoute = ferryRoutes.filter(route => 
+           route.route.includes(routeChoice));
+  console.log("Matches Found "+matchingRoute.length())  
 }
 
 function showRoutes()
