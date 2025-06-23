@@ -345,6 +345,38 @@ main, .app {
   border-color: #0077cc;
 }
 
+/* Target dropdowns and buttons */
+select,
+button,
+input[type="checkbox"],
+label {
+  font-size: 1.1rem;
+  padding: 0.6em 1em;
+  margin: 0.5em 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Give more room for checkboxes and labels */
+input[type="checkbox"] {
+  transform: scale(1.4);
+  margin-right: 0.5em;
+}
+
+/* Optional: Set width for dropdown */
+select {
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Improve tap target for the show button */
+button {
+  min-width: 120px;
+  cursor: pointer;
+}
+
+
 
 
 
