@@ -207,3 +207,14 @@ function renderAllRoutes() {
     container.appendChild(card);
   });
 }
+
+//set up event listener for route selection
+document.getElementById("routeFilter").addEventListener("change", function () {
+  const selectedRoute = this.value;
+  const filteredRoutes = selectedRoute === "all"
+    ? routesData
+    : routesData.filter(route => route.crossing === selectedRoute);
+
+  renderRoutes(filteredRoutes); // Replace with your existing rendering function
+});
+
