@@ -19,7 +19,11 @@
     <h2>Cross Channel Ferry Routes</h2>
         <p>Here are all the Cross Channel Ferry Routes available.</p>
     <div class="app">
-        
+        <label for="routeFilter">Filter by Route:</label>
+            <select id="routeFilter">
+              <option value="all">All Routes</option>
+              <!-- Options added dynamically -->
+            </select>
         <button class="searchButton" onclick="renderAllRoutes()">Show Routes</button>
         <!-- This shows route cards directly -->
         <div id="routeResults"></div>
