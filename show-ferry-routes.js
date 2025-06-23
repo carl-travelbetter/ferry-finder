@@ -214,12 +214,22 @@ document.getElementById("routeFilter").addEventListener("change", () => {
 }
 );
 
-/*
+
+
 function showRoutes()
 {
   console.log("Getting Route Selected...");
   const selectedRoute = document.getElementById("routeFilter");
   const routeChoice = selectedRoute.value;
   console.log("Route Choice = "+routeChoice);
-}*/
+  if (routeChoice == "all")
+  {
+    renderAllRoutes();
+  }
+  else
+  {
+    console.log("I need to write a version of render for filtered routes..");
+  }
+  
+}
 
