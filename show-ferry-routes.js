@@ -45,7 +45,7 @@ function populateRouteDropdown() {
 }
 
 //show route cards 
-function renderAllRoutes(selectedRoute) {
+function renderAllRoutes() {
   
   
   const container = document.getElementById("routeResults");
