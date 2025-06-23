@@ -32,6 +32,7 @@ fetch('ferry-routes.json')
 
 //load route options for user
 function populateRouteDropdown() {
+  console.log("Populating Route Drop Down");
   const dropdown = document.getElementById("routeFilter");
   const routeNames = [...new Set(routesData.map(route => route.crossing))];
 
