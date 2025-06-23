@@ -34,7 +34,7 @@ fetch('ferry-routes.json')
 function populateRouteDropdown() {
   console.log("Populating Route Drop Down");
   const dropdown = document.getElementById("routeFilter");
-  const routeNames = [...new Set(ferryRoutes.map(route => route.route))];
+  const routeNames = [...new Set(ferryRoutes.map(route => route.startPort))];
 
   routeNames.sort().forEach(route => {
     const option = document.createElement("option");
