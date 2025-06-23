@@ -210,7 +210,7 @@ function renderAllRoutes(selectedRoute) {
 } //End of Render All Routes
 
 
-function testingListener()
+function showRoutes()
 {
   console.log("Getting Route Selected...");
   const selectedRoute = document.getElementById("routeFilter");
