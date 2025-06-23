@@ -26,13 +26,24 @@ fetch('ferry-routes.json')
     ferryRoutes = data;
     console.log("Ferry Routes loaded:", ferryRoutes);
      // ✅ Render routes after data is loaded and DOM is ready
-    
+    populateRouteDropdown();
   })
   .catch(error => console.error("Error loading ferry data:", error));
 
+//load route options for user
+function populateRouteDropdown() {
+  const dropdown = document.getElementById("routeFilter");
+  const routeNames = [...new Set(routesData.map(route => route.crossing))];
 
+  routeNames.sort().forEach(route => {
+    const option = document.createElement("option");
+    option.value = route;
+    option.textContent = route;
+    dropdown.appendChild(option);
+  });
+}
 
-
+//show route cards 
 function renderAllRoutes() {
   
   
