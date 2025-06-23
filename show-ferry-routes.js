@@ -207,15 +207,15 @@ function renderAllRoutes(selectedRoute) {
     card.append(operatorList);
     container.appendChild(card);
   });
-}
+} //End of Render All Routes
 
-document.getElementById("showRoutesButton").addEventListener("click", function () {
+document.getElementById("showRoutesButton").addEventListener("click", function() {
   //const selectedRoute = this.value;
   //const filteredRoutes = selectedRoute === "all"
    // ? routesData
     //: routesData.filter(route => route.crossing === selectedRoute);
   console.log("Show Routes Button Clicked");
-  renderRoutes("All"); // Replace with your existing rendering function
+  //renderRoutes("All"); // Replace with your existing rendering function
 });
 
 
