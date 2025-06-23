@@ -212,6 +212,7 @@ function renderAllRoutes() {
 document.getElementById("routeFilter").addEventListener("change", () => {
     console.log('You changed your selection');
 }
+);
 
 /*
 function showRoutes()
