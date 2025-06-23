@@ -221,7 +221,9 @@ function showSelectedRoutes(routeChoice)
   
   const matchingRoute = ferryRoutes.filter(route => 
            route.route.includes(routeChoice));
-  console.log("Matches Found "+matchingRoute.id)  
+  matchingRoute.forEach(route => {
+               console.log("Matching route "+route.id);
+  }); 
 }
 
 function showRoutes()
