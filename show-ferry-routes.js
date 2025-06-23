@@ -214,7 +214,11 @@ document.getElementById("routeFilter").addEventListener("change", () => {
 }
 );
 
-
+function showSelectedRoutes(routeChoice)
+{
+  console.log("Show Selected Routes");
+  console.log("Route Choice = "+routeChoice);
+}
 
 function showRoutes()
 {
@@ -228,7 +232,7 @@ function showRoutes()
   }
   else
   {
-    console.log("I need to write a version of render for filtered routes..");
+    showSelectedRoutes(routeChoice);
   }
   
 }
