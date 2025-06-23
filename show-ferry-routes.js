@@ -209,12 +209,16 @@ function renderAllRoutes() {
   });
 } //End of Render All Routes
 
+document.getElementById("routeFilter").addEventListener("change", () => {
+    console.log('You changed your selection');
+}
 
+/*
 function showRoutes()
 {
   console.log("Getting Route Selected...");
   const selectedRoute = document.getElementById("routeFilter");
   const routeChoice = selectedRoute.value;
   console.log("Route Choice = "+routeChoice);
-}
+}*/
 
