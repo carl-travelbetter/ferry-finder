@@ -209,13 +209,13 @@ function renderAllRoutes(selectedRoute) {
   });
 }
 
-document.getElementById("routeFilter").addEventListener("change", function () {
-  const selectedRoute = this.value;
-  const filteredRoutes = selectedRoute === "all"
-    ? routesData
-    : routesData.filter(route => route.crossing === selectedRoute);
-
-  renderRoutes(filteredRoutes); // Replace with your existing rendering function
+document.getElementById("showRoutesButton").addEventListener("click", function () {
+  //const selectedRoute = this.value;
+  //const filteredRoutes = selectedRoute === "all"
+   // ? routesData
+    //: routesData.filter(route => route.crossing === selectedRoute);
+  console.log("Show Routes Button Clicked");
+  renderRoutes("All"); // Replace with your existing rendering function
 });
 
 
