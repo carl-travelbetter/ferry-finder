@@ -209,13 +209,12 @@ function renderAllRoutes(selectedRoute) {
   });
 } //End of Render All Routes
 
-document.getElementById("showRoutesButton").addEventListener("click", function() {
-  //const selectedRoute = this.value;
-  //const filteredRoutes = selectedRoute === "all"
-   // ? routesData
-    //: routesData.filter(route => route.crossing === selectedRoute);
-  console.log("Show Routes Button Clicked");
-  //renderRoutes("All"); // Replace with your existing rendering function
-});
 
+function testingListener()
+{
+  console.log("Getting Route Selected...");
+  const selectedRoute = document.getElementById("routeFilter");
+  const routeChoice = selectedRoute.value;
+  console.log("Route Choice = "+routeChoice);
+}
 
