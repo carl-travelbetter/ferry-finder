@@ -10,6 +10,10 @@ p {
     padding:5px;
 }
 
+#intro {
+    margin: auto;
+}
+
 body {
     
   font-family: sans-serif;
