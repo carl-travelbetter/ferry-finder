@@ -415,6 +415,14 @@ function showAllRoutes() {
   renderRoutes(ferryRoutes);
 }
 
+//clear selections
+function clearSelections() {
+  const routeButtons = document.querySelectorAll("#routePills button.active");
+  routeButtons.forEach(btn => btn.classList.remove("active"));
+
+  const container = document.getElementById("routeResults");
+  container.innerHTML = "";
+}
 
 /*function showRoutes()
 {
