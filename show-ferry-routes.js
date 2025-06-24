@@ -26,12 +26,12 @@ fetch('ferry-routes.json')
     ferryRoutes = data;
     console.log("Ferry Routes loaded:", ferryRoutes);
      // ✅ Render routes after data is loaded and DOM is ready
-    populateRouteDropdown();
+    createRoutePills()
   })
   .catch(error => console.error("Error loading ferry data:", error));
 
 //load route options for user
-function populateRouteDropdown() {
+/*function populateRouteDropdown() {
   console.log("Populating Route Drop Down");
   const dropdown = document.getElementById("routeFilter");
   const routeNames = [...new Set(ferryRoutes.map(route => route.route))];
@@ -42,7 +42,24 @@ function populateRouteDropdown() {
     option.textContent = route;
     dropdown.appendChild(option);
   });
+}*/
+
+function createRoutePills() {
+  console.log("Creating Route Pill Buttons...");
+  const container = document.getElementById("routePills");
+  const uniqueRoutes = [...new Set(ferryRoutes.map(route => route.route))];
+
+  uniqueRoutes.forEach(routeName => {
+    const btn = document.createElement("button");
+    btn.textContent = routeName;
+    btn.setAttribute("data-route", routeName);
+    btn.addEventListener("click", function () {
+      btn.classList.toggle("active");
+    });
+    container.appendChild(btn);
+  });
 }
+
 
 //show route cards 
 function renderAllRoutes() {
