@@ -352,7 +352,7 @@ input[type="checkbox"],
 label {
   font-size: 1.1rem;
   padding: 0.6em 1em;
-  margin: 0.5em 1em;
+  margin: auto;
   border-radius: 8px;
   border: 1px solid #ccc;
 }
