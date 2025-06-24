@@ -12,11 +12,15 @@
     
       <H1>Cross Channel Ferry Routes 2025</H1>
       <div class="app">
-           <label for="routeFilter">Select Route</label>
+         <!--  <label for="routeFilter">Select Route</label>
             <select id="routeFilter">
               <option value="all">See All Routes</option>
               <!-- Options added dynamically -->
-            </select><br>
+           <!-- </select><br> -->
+          <div id="routePills" class="route-pills">
+          <!-- Buttons added dynamically by JS -->
+          </div><br>
+
         <button class="searchButton" onclick="showRoutes()" id="showRoutesButton">Show Selected Routes</button>
         <!-- This shows route cards directly -->
         <div id="routeResults"></div>
