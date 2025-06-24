@@ -1,18 +1,13 @@
-h1 {
+.intro h1 {
     font-size:4vw;
     margin:auto;
     text-align:center;
     color:#004080;
 }
 
-p {
-    margin-left:10px;
-    padding:5px;
-}
-
-#intro {
-    margin: auto;
-    color:#1e0063
+.intro p {
+    margin-left:25px;
+    padding:1rem;
 }
 
 body {
@@ -113,7 +108,7 @@ body {
 .ferryCard {
   padding: 1rem;
   margin: 1rem 0;
-  background-color: #c6cef7; /* optional: or keep your current color */
+  background-color: #c2fcf7; /* optional: or keep your current color */
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   text-align: left;
@@ -349,70 +344,3 @@ main, .app {
   color: white;
   border-color: #0077cc;
 }
-
-/* Target dropdowns and buttons */
-select,
-button,
-input[type="checkbox"],
-label {
-  font-size: 1.1rem;
-  padding: 0.6em 1em;
-  margin: auto;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-/* Give more room for checkboxes and labels */
-input[type="checkbox"] {
-  transform: scale(1.4);
-  margin-right: 0.5em;
-}
-
-/* Optional: Set width for dropdown */
-select {
-  width: 100%;
-  max-width: 400px;
-  box-sizing: border-box;
-}
-
-/* Improve tap target for the show button */
-button {
-  min-width: 120px;
-  cursor: pointer;
-}
-
-.route-pills button {
-  margin: 0.25em;
-  padding: 0.5em 1em;
-  border: 1px solid #ccc;
-  background-color: #f5f5f5;
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.route-pills button.active {
-  background-color: #0077cc;
-  color: #fff;
-  border-color: #005fa3;
-}
-
-#clearRouteSelection {
-  background-color: #004080;
-  color: white;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-#clearRouteSelection:hover {
-  background-color: #ddd;
-}
-
-
-
-
