@@ -397,5 +397,20 @@ button {
   border-color: #005fa3;
 }
 
+#clearRouteSelection {
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#clearRouteSelection:hover {
+  background-color: #ddd;
+}
+
+
 
 
