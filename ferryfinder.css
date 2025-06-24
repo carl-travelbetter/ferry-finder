@@ -368,6 +368,7 @@ select {
   width: 100%;
   max-width: 400px;
   box-sizing: border-box;
+  margin: auto;
 }
 
 /* Improve tap target for the show button */
@@ -375,7 +376,6 @@ button {
   min-width: 120px;
   cursor: pointer;
 }
-
 
 
 
