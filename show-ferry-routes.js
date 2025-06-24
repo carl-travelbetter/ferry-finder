@@ -402,7 +402,7 @@ function showRoutes() {
   let filteredRoutes = ferryRoutes;
 
   if (selectedRoutes.length > 0) {
-    filteredRoutes = routesData.filter(route =>
+    filteredRoutes = ferryRoutes.filter(route =>
       selectedRoutes.includes(route.route)
     );
   }
