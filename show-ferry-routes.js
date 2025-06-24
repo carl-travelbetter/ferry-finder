@@ -62,7 +62,7 @@ function createRoutePills() {
 
 
 //show route cards 
-function renderAllRoutes(selectedRoutes) {
+function renderRoutes(selectedRoutes) {
   
   
   const container = document.getElementById("routeResults");
