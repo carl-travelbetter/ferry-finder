@@ -1,13 +1,13 @@
-.intro h1 {
+h1 {
     font-size:4vw;
     margin:auto;
     text-align:center;
     color:#004080;
 }
 
-.intro p {
-    margin-left:25px;
-    padding:1rem;
+p {
+    margin-left:10px;
+    padding:5px;
 }
 
 body {
