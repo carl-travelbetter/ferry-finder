@@ -62,22 +62,22 @@ function createRoutePills() {
 
 
 //show route cards 
-function renderAllRoutes() {
+function renderAllRoutes(selectedRoutes) {
   
   
   const container = document.getElementById("routeResults");
   container.innerHTML = "";
 
-  const matchingRoutes = ferryRoutes.filter(route =>
+  /*const matchingRoutes = selectedRoutes.filter(route =>
     activeTags.length === 0 || activeTags.every(tag => route.tags.includes(tag))
-  );
+  );*/
 
-  if (matchingRoutes.length === 0) {
-    container.innerHTML = "<p>No routes match your selected needs.</p>";
+  if (selectedRoutes.length === 0) {
+    container.innerHTML = "<p>No routes selected</p>";
     return;
   }
 
-  matchingRoutes.forEach(ferry => {
+  selectedRoutes.forEach(ferry => {
     const card = document.createElement("div");
     card.className = "ferryCard routeCard fade-in";
 
@@ -227,7 +227,7 @@ function renderAllRoutes() {
 } //End of Render All Routes
 
 
-
+//Shows an individual route
 function showSelectedRoutes(routeChoice)
 {
   console.log("Show Selected Routes");
@@ -390,7 +390,29 @@ function showSelectedRoutes(routeChoice)
   }); 
 }
 
-function showRoutes()
+function getSelectedRoutes() {
+  const activeButtons = document.querySelectorAll("#routePills button.active");
+  return Array.from(activeButtons).map(btn => btn.getAttribute("data-route"));
+}
+
+function showRoutes() {
+  console.log("Show Routes Functions...");
+  const selectedRoutes = getSelectedRoutes();
+
+  let filteredRoutes = ferryRoutes;
+
+  if (selectedRoutes.length > 0) {
+    filteredRoutes = routesData.filter(route =>
+      selectedRoutes.includes(route.route)
+    );
+  }
+
+  renderRoutes(filteredRoutes); // or whatever your render function is
+}
+
+
+
+/*function showRoutes()
 {
   console.log("Getting Route Selected...");
   const selectedRoute = document.getElementById("routeFilter");
@@ -405,5 +427,5 @@ function showRoutes()
     showSelectedRoutes(routeChoice);
   }
   
-}
+}*/
 
