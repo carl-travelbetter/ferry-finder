@@ -410,6 +410,10 @@ function showRoutes() {
   renderRoutes(filteredRoutes); // or whatever your render function is
 }
 
+function showAllRoutes() {
+  console.log("Show All Routes...");
+  renderRoutes(ferryRoutes);
+}
 
 
 /*function showRoutes()
