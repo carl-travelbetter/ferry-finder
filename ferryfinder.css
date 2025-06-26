@@ -412,3 +412,8 @@ button {
 #clearRouteSelection:hover {
   background-color: #4367f7;
 }
+
+.disclaimer h4, p {
+    color: #5e03fc;
+    font-size: small;
+}
