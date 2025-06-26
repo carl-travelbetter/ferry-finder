@@ -415,5 +415,6 @@ button {
 
 .disclaimer {
     color: #5e03fc;
-    font-size: small;
+    font-size: 8px;
+    margin:auto;
 }
