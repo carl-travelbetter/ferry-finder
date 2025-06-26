@@ -413,7 +413,7 @@ button {
   background-color: #4367f7;
 }
 
-.disclaimer h4, p {
+.disclaimer {
     color: #5e03fc;
     font-size: small;
 }
